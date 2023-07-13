@@ -91,7 +91,9 @@ clear
 
 Como mencionamos, en ocasiones queremos imprimir el encabezado o cierto número de líneas del documento, para ello utilizamos el comando ``head`` (head):
 
-```$head verde.txt```
+```
+head verde.txt
+```
 
 Varios comandos tienen ciertas funciones, por ejemplo ``head`` acompañado de la función ``-n 40`` imprime en pantalla las primeras 40 lineas del documento:
 
