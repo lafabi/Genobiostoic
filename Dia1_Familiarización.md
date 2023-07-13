@@ -15,6 +15,7 @@ Primero hagamos un saludo al sistema operativo y haremos que se imprima en la pa
 Muchas veces nos resultará útil saber en qué carpeta estamos (desde ahora llamaremos a las carpetas directorios), para ello utilizamos el comando pwd (print working directory)
 
 ```$ pwd```
+
 /home/fabiola
 
 Generalmente cuando ingresamos por primera vez a la terminal, el sistema nos redirige al home del usuario. Será conveniente cambiarnos de directorio y para ello usaremos el comando cd (change directory).
