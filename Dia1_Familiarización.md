@@ -6,19 +6,19 @@ La "shell" es una interfaz gráfica que opera a través de líneas de comando, �
 
 Como mencionamos con anterioridad, nos podemos comunicar con el sistema operativo a través de un interlocutor, los comandos. Ahora, omenzaremos a aprender un lenguaje que nos permitirá interactuar y dar instrucciones al sistema para la ejecución de una tarea. Usualmente, los comandos son acrónimos de palabras en inglés y se definen según la función que desempeñan.
 
-Primero hagamos un saludo al sistema operativo y haremos que se imprima en la pantalla a través del comando echo (es un eco de lo que quieres imprimir en pantalla)
+Primero hagamos un saludo al sistema operativo y haremos que se imprima en la pantalla a través del comando ``echo`` (es un eco de lo que quieres imprimir en pantalla)
 
 ``$echo Hello World``
 
 ## Navegar entre sistemas de archivos
 
-Muchas veces nos resultará útil saber en qué carpeta estamos (desde ahora llamaremos a las carpetas directorios), para ello utilizamos el comando pwd (print working directory)
+Muchas veces nos resultará útil saber en qué carpeta estamos (desde ahora llamaremos a las carpetas directorios), para ello utilizamos el comando ``pwd`` (print working directory)
 
 ```$ pwd```
 
 /home/fabiola
 
-Generalmente cuando ingresamos por primera vez a la terminal, el sistema nos redirige al home del usuario. Será conveniente cambiarnos de directorio y para ello usaremos el comando cd (change directory).
+Generalmente cuando ingresamos por primera vez a la terminal, el sistema nos redirige al home del usuario. Será conveniente cambiarnos de directorio y para ello usaremos el comando ``cd`` (change directory).
 
 ```$cd Documentos```
 
@@ -27,15 +27,15 @@ Ahora verifiquemos que nos cambiamos de directorio con pwd
 ```$pwd```
 /home/fabiola/Documentos
 
-Dado que nos cambiamos a Documentos, ahora creemos un subdirectorio dentro de Documentos con el comando mkdir (make directory).
+Dado que nos cambiamos a Documentos, ahora creemos un subdirectorio dentro de Documentos con el comando ``mkdir`` (make directory).
 
 ```$mkdir Genobiostoic```
 
-Verifiquemos que se haya creado el ditectorio Genobiostoic a través del comando ls (list) 
+Verifiquemos que se haya creado el ditectorio Genobiostoic a través del comando ``ls`` (list) 
 
 ```$ls```
 
-Aquí observamos que se ha creado un nuevo directorio llamado Genobiostoic, su directorio parental es Documentos. Verifiquemos el sistema anidado y jerarquico de directorios con pwd 
+Aquí observamos que se ha creado un nuevo directorio llamado Genobiostoic, su directorio parental es Documentos. Verifiquemos el sistema anidado y jerarquico de directorios con ``pwd``
 
 ```$pwd```
 /home/fabiola/Documentos/Genobiostoic
@@ -45,7 +45,7 @@ En la terminal, las rutas relativas y absolutas se utilizan para especificar la 
 
 ## Interactuar con archivos
 
-Lo primero que haremos en esta sección será crear un archivo con un editor de texto. La terminal shell trae un editor de texto instalado llamado nano. Basta con invocarlo tipeando nano en la terminal 
+Lo primero que haremos en esta sección será crear un archivo con un editor de texto. La terminal shell trae un editor de texto instalado llamado ``nano``. Basta con invocarlo tipeando nano en la terminal 
 
 ```$nano```
 
@@ -53,11 +53,11 @@ A continuación se abre una ventana en la que podemos pegar, tipear y/o editar e
 
 ```$nano verde.txt```
 
-Ahora peguemos el poema de Federico Garcia Lorca dentro del documento en nano, guardemos con ^o y salgamos de nano con ^x.Verifiquemos que se ha creado el documento con el comando ls, debería aparecer el nombre del documento "verde.txt" en el directorio
+Ahora peguemos el poema de Federico Garcia Lorca dentro del documento en nano, guardemos con ^o y salgamos de nano con ^x.Verifiquemos que se ha creado el documento con el comando ``ls``, debería aparecer el nombre del documento "verde.txt" en el directorio
 
 ```$ls```
 
-En este punto aprenderemos varios comandos que nos permitiran interactuar con estos archivos, como vimos el programa nano nos confiere el permiso de editar o modificar el documento, ahora bien, muchas veces queremos ver el documento, es decir imprimir el contenido en la pantalla sin que sea modificado. Para esto ocupamos el comando cat (concat):
+En este punto aprenderemos varios comandos que nos permitiran interactuar con estos archivos, como vimos el programa nano nos confiere el permiso de editar o modificar el documento, ahora bien, muchas veces queremos ver el documento, es decir imprimir el contenido en la pantalla sin que sea modificado. Para esto ocupamos el comando ``cat`` (concat):
 
 ```$cat verde.txt```
 
@@ -65,28 +65,28 @@ A continuación el texto contenido en el documento se imprimirá en la pantalla.
 
 ```$clear```
 
-Como mencionamos, en ocasiones queremos imprimir el encabezado o cierto número de líneas del documento, para ello utilizamos el comando head (head):
+Como mencionamos, en ocasiones queremos imprimir el encabezado o cierto número de líneas del documento, para ello utilizamos el comando ``head`` (head):
 
 ```$head verde.txt```
 
-Varios comandos tienen ciertas funciones, por ejemplo head acompañado de la función -n 40 imprime en pantalla las primeras 40 lineas del documento:
+Varios comandos tienen ciertas funciones, por ejemplo ``head`` acompañado de la función ``-n 40`` imprime en pantalla las primeras 40 lineas del documento:
 
 ```$head -n 40 verde.txt```
 
 
-También, podemos imprimir el final de un documento con el comando tail 
+También, podemos imprimir el final de un documento con el comando ``tail`` 
 
 ```$tail verde.txt```
 
-Al igual que head, tail acepta la función -n y podemos imprimir las lineas que deseemos.
+Al igual que ``head``, ``tail`` acepta la función ``-n`` y podemos imprimir las lineas que deseemos.
 
 
-Cuando se trabajan con datos Genómicos, muchas veces queremos buscar, ubicar o filtrar ciertos loci, cromosomas, individuos etc dentro de un archivo, para ello ocupamos el comando grep (globally search for regular expression and print out). En este ejemplo buscaremos la palabra verde en el texto verde.txt, para ello tipearemos:
+Cuando se trabajan con datos Genómicos, muchas veces queremos buscar, ubicar o filtrar ciertos loci, cromosomas, individuos etc dentro de un archivo, para ello ocupamos el comando ``grep`` (globally search for regular expression and print out). En este ejemplo buscaremos la palabra verde en el texto verde.txt, para ello tipearemos:
 
 ```$grep verde verde.txt```
 
-Aquí, vale la pena resaltar que dimos una instrucción distinta, ordenamos buscar (grep) una palabra (verde) en un archivo (verde.txt). De esta forma diseñamos la sintaxis de un programa un poco más complejo que los anteriores.
+Aquí, vale la pena resaltar que dimos una instrucción distinta, ordenamos buscar (``grep``) una palabra (verde) en un archivo (verde.txt). De esta forma diseñamos la sintaxis de un programa un poco más complejo que los anteriores.
 
-Ahora vayamos más allá y buquemos (grep) un palabra (Compadre) y contemos cuántas veces se repite con wc (word count)
+Ahora vayamos más allá y buquemos (``grep``) un palabra (Compadre) y contemos cuántas veces se repite con ``wc`` (word count)
 
 ```grep Compadre verde.txt | wc -l```
