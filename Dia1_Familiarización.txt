@@ -8,7 +8,7 @@ Como mencionamos con anterioridad, nos podemos comunicar con el sistema operativ
 
 Primero hagamos un saludo al sistema operativo y haremos que se imprima en la pantalla a través del comando echo (es un eco de lo que quieres imprimir en pantalla)
 
-```$echo Hello World```
+```echo Hello World```
 
 ## Navegar entre sistemas de archivos
 
