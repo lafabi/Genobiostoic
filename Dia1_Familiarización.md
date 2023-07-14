@@ -47,7 +47,7 @@ Verifiquemos que se haya creado el ditectorio Genobiostoic a través del comando
 ls
 ```
 
-Aquí observamos que se ha creado un nuevo directorio llamado Genobiostoic, su directorio parental es Documentos. Verifiquemos el sistema anidado y jerarquico de directorios con ``pwd``
+Aquí observamos que se ha creado un nuevo directorio llamado Genobiostoic,su directorio parental es Documentos. Verifiquemos el sistema anidado y jerarquico de directorios con ``pwd``
 
 ```
 pwd
@@ -55,6 +55,11 @@ pwd
 ```/home/fabiola/Documentos/Genobiostoic```
 
 En la terminal, las rutas relativas y absolutas se utilizan para especificar la ubicación de un archivo o directorio en el sistema de archivos. Una ruta absoluta, como su nombre lo indica, es una ruta completa que comienza desde la raíz o home  del sistema de archivos y especifica la ubicación exacta de un archivo o directorio, en linux toda ruta absoluta comienza con un slash (/). Por el contrario una ruta relativa especifica la ubicación de un archivo o directorio en relación con la ubicación actual. No comienza con un slash (/)  y depende la ruta donde se encuentre el usuario.
+
+
+Ahora que tenemos creado un directorio llamado *Genobiostoic* 
+
+
 
 
 ## Interactuar con archivos
