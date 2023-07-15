@@ -14,8 +14,9 @@ Existen varias formas de ejecutar una tarea o correr un programa en la terminal 
     
 ```
 nano
-```
 mkdir sochigen
+```
+
 
 Seguidamente guardaremos el documento de texto plano con el nombre de "script1.sh" y haremos el script ejecutable, es decir el sistema lo reconocerá como un programa, a través del siguiente comando:
 ```
@@ -72,7 +73,7 @@ El script que se envía al NLHPC de la Universidad de Chile tiene la siguente es
 # ----------------Comando--------------------------
 ```
 
-###Pensar en colocar la tabla, como imagen, de Leftrarú en este apartado.
+
 
 Dependendiendo de los recursos que requiera el trabajo (nodos, hilos, memoria, tiempo), se escoje la partición en el servidor y se agrega la información necesaria para construir el "membrete" del script de forma muy sencilla y amigable.Una vez realizado se copia y se pega en un editor de texto plano, se adiciona el código comando que se quiere ejecutar y se asigna un nombre (e este caso script2.sh) junto con la extensión del lenguaje en que se ha escrito el script (en este caso bash, .sh). 
 
