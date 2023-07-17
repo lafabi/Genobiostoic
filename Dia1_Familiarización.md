@@ -83,7 +83,7 @@ Ahora peguemos el poema de Federico Garcia Lorca dentro del documento en nano, g
 ls
 ```
 
-En este punto aprenderemos varios comandos que nos permitiran interactuar con estos archivos, como vimos el programa nano nos confiere el permiso de editar o modificar el documento, ahora bien, muchas veces queremos ver el documento, es decir imprimir el contenido en la pantalla sin que sea modificado. Para esto ocupamos el comando ``cat`` (concat):
+En este punto aprenderemos varios comandos que nos permitiran interactuar con estos archivos, como vimos el programa ```nano``` nos confiere el permiso de editar o modificar el documento, ahora bien, muchas veces queremos ver el documento, es decir imprimir el contenido en la pantalla sin que sea modificado. Para esto ocupamos el comando ``cat`` (concat):
 
 ```
 cat verde.txt
