@@ -71,7 +71,7 @@ Lo primero que haremos en esta sección será crear un archivo con un editor de 
 nano
 ```
 
-A continuación se abre una ventana en la que podemos pegar, tipear y/o editar el texto que deseemos. Presionando ^x salimos del editor de texto nano y regresamos a la terminal. Ahora que sabemos invocar el editor de texto procedamos a crear un documento de texto plano .txt llamado verde. Para ello copiemos el poema de Federico García Lorca y a continuación invoquemos nano y creemos al mismo tiempo el documento con su nombre y extensión:
+A continuación se abre una ventana en la que podemos pegar, tipear y/o editar el texto que deseemos. Presionando ^x salimos del editor de texto nano y regresamos a la terminal. Ahora que sabemos invocar el editor de texto procedamos a crear un documento de texto plano .txt llamado verde. Para ello copiemos el poema de Federico García Lorca (Disponible al final de esta sección) y a continuación invoquemos ```nano``` y creemos al mismo tiempo el documento con su nombre y extensión:
 
 ```
 nano verde.txt
