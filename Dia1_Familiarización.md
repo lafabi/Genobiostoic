@@ -62,6 +62,45 @@ Ahora que tenemos creado un directorio llamado *Genobiostoic* construyamos esta 
 ![Jerarquía de directorios](https://github.com/lafabi/Genobiostoic/blob/main/Jerarquia_Dir.png)
 
 
+## Descargar archivos
+
+Ahora que sabemos cómo crear directorios, moverslos entre ellos y listar su contenido, aprendamos a descargar archivos desde repositorios remotos a través de líneas de comando, para ello usaremos ```wget```. En esta oportunidad descargaremos el Libro de literatura inglesa clásica Dr. Jeckyll y Mr.Hyde a través de este comando: 
+
+
+```
+wget https://www.gutenberg.org/cache/epub/43/pg43.txt
+```
+Verifiquemos que se haya descargado el libro con el comando ```ls```
+
+
+El comando ```mv``` (move) permite cambiar de nombre de un archivo o directorio. Cambiemos el nombre del libro desde pg43.txt a libro1.txt
+
+
+```
+mv pg43.txt libro1.txt
+```
+
+En este punto hemos dado una instrucción, mover o cambiar el nombre de un archivo (pg43.txt) por otro nombre de archivo (libro1.txt)
+El comando ```mv``` tambien permite mudar archivos entre directorios, si queremos mudar "libro.txt" desde Genobiostoic a Terminal escribamos
+
+```
+mv libro.txt /Terminal/Libro
+
+```
+
+Luego verifiquemos que efectivamente hayamos mudado el archivo libro.txt al directorio indicado
+
+```
+cd Terminal/Libro
+ls
+```
+```libro.txt```
+
+
+Si queremos imprimir en pantalla el libro ocupamos el comando ```cat```, este nos mostrará todo el libro sin la posibilidad de editarlo. 
+
+A continuación haremos una practica más extensa con diversos comandos para interactuar con distintos tipos de archivos.
+
 
 ## Interactuar con archivos
 
@@ -83,7 +122,7 @@ Ahora peguemos el poema de Federico Garcia Lorca dentro del documento en nano, g
 ls
 ```
 
-En este punto aprenderemos varios comandos que nos permitiran interactuar con estos archivos, como vimos el programa ```nano``` nos confiere el permiso de editar o modificar el documento, ahora bien, muchas veces queremos ver el documento, es decir imprimir el contenido en la pantalla sin que sea modificado. Para esto ocupamos el comando ``cat`` (concat):
+En este punto aprenderemos varios comandos que nos permitiran interactuar con estos archivos, como vimos, el programa ```nano``` nos confiere el permiso de editar o modificar el documento, ahora bien, muchas veces queremos ver el documento, es decir imprimir el contenido en la pantalla sin que sea modificado. Para esto ocupamos el comando ``cat`` (concat):
 
 ```
 cat verde.txt
