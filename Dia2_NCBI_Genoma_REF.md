@@ -41,5 +41,5 @@ Rhinoderma darwinii
 Construye una tabla comparativa entre los atributos de cada uno de los posibles genomas de referencia encontrados en el NCBI. En caso que no existan genoma sde referencias de los modelos propuestos, cuáles otros pudieras escoger y por qué?. A continuación mostraremos un diagrama con base en la toma de desiciones que debiéramos tomar en consideración a la hora de escoger el genoma de referencia y que estaría sujeto a nustra pregunta de investigación.
 
 
-
+![Pregunta-proyecto](https://github.com/lafabi/Genobiostoic/blob/main/Pregunta-proyecto.png)
 
