@@ -170,6 +170,20 @@ Ahora vayamos más allá y buquemos (``grep``) un palabra (Compadre) y contemos 
 grep Compadre verde.txt | wc -l
 ```
 
+En este apartado tendremos la oportunidad de descargar una tabla con ```wget``` y luego filtar con el comando ```awk``` la primera y segunda columna de la tabla. Esta herramienta en muy útil cuado se trabaja con archivos .xlx y .csv
+
+```
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/010/085/365/GCA_010085365.1_BGI_Echrysoc_fil.V1/GCA_010085365.1_BGI_Echrysoc_fil.V1_assembly_stats.txt
+```
+
+Para filtar la primera colunma ocuparemos ```awk``` junto con algunos operadores como aparece a continuación:
+
+
+```
+awk '{ print $1 }'
+
+```
+Esta acción desplegará el contenido de la primera columna de la tabla.
 
 ## Poema de Federico García Lorca *Romance Noctámbulo*
 
