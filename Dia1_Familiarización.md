@@ -84,7 +84,7 @@ En este punto hemos dado una instrucción, mover o cambiar el nombre de un archi
 El comando ```mv``` tambien permite mudar archivos entre directorios, si queremos mudar "libro.txt" desde Genobiostoic a Terminal escribamos
 
 ```
-mv libro.txt /Terminal/Libro
+mv libro.txt Terminal/Libro
 
 ```
 
