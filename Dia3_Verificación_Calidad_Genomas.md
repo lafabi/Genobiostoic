@@ -22,5 +22,7 @@ La imagen  tardará en imprimirse dependiendo del tamaño del archivo. Esta imag
 Una vez descargados los genomas de Zorros y verificado la imágenes correspondientes, procederemos a verificar la calidad de los genomas y para ello ocuparemos el programa ```FastQC```
 para efectos de este taller estarán instalados los programas en el servidor, éstos estarán disponibles a travpes de ```conda```
 
+Los genomas estarán depositados en el siguiente directorio ```/home/fleon/genomes/``. Es hora de elaborar nuestro primer Script: 
+
 
 
