@@ -31,6 +31,9 @@ En ocasiones, la primera vez que nos conectamos a un servidor remoto, éste nos 
 ![Key-print](https://github.com/lafabi/Genobiostoic/blob/main/Key-print.png)
 
 
+Una vez conectado en el servidor, entraremos al home/ de nuestro usuario, y para cada participante crearemos un usuario con nuestro nombre para trabajar cada uno en nuestro directorio, para fines de este taller.
+
+
 Al igual que nuestra máquina local, éstos servidores ofrecen la alternativa de correr scripts en el frontend, pero no es la mejor alternativa, dado que se ocupan los recursos informaticos de forma poco eficiente. En este caso, los servidores de alta capacidad tales como el NLHPC de la Universidad de Chile [https://www.nlhpc.cl/](https://www.nlhpc.cl/) o [Geryon https://www3.astro.puc.cl/geryon/](https://www3.astro.puc.cl/geryon) de la Universidad Católica funcionan con un sistema de planificador de tareas o Shedulers. Este sistema opera asignando filas y prioridades a las tareas según la capacidad de los recursos, administrando de mejor forma los recursos tales como memoria, núcleos, tiempo de ejecución de trabajos, etc. Estos scripts se corren en el backend, que es un espacio donde se llevan a cabo tareas en el sistema operativo oculto de fondo. En el próximo apartado hablaremos con más detalle de este sistema de administrador de trabajos. Por ahora veremos la arquitectura en la construcción de estos scripts: 
 
 Al igual que una carta, los scripts que se envían al backend tienen un "membrete" con una serie de intrucciones para el asistente "virtual", en ésta indicarán ciertas características de la tarea. 
