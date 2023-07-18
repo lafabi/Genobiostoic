@@ -25,4 +25,28 @@ para efectos de este taller estarán instalados los programas en el servidor, é
 Los genomas estarán depositados en el siguiente directorio ```/home/fleon/genomes/``. Es hora de elaborar nuestro primer Script: 
 
 
+```
+#!/bin/bash
+#---------------Script SBATCH - NLHPC ----------------
+#SBATCH -J FastQC-zorro
+#SBATCH -p general
+#SBATCH -n 1
+#SBATCH -c 1
+#SBATCH --mem-per-cpu=1500
+#SBATCH --mail-user=email
+#SBATCH --mail-type=ALL
+#SBATCH -t 2:2:5
+#SBATCH -o FastQC_%j.out
+#SBATCH -e FastQC_%j.err
+
+GEN=/home/fleon/genomes/
+QC=/home/fleon/genomes/QC
+
+source $HOME/miniconda3/bin/activate
+conda activate assembly
+
+fastqc -o $QC/ --noextract -t 1 -f fastq $GEN/*.gz
+
+
+```
 
