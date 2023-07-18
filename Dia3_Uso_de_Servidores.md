@@ -2,11 +2,36 @@
 
 
 3)El uso de servidores remotos, es cada vez más común y posibilita la oportunidad de ocupar, eficientemente, múltiples procesadores de alto rendimiento. Cada servidor tiene su propio tipo de configuración, arquitectura, capacidades, particiones y pueden tener o no agendadores de tareas o Schedulers. Les sugerimos que , a la hora de ocupar un servidor de lata capacidad, aprendan sobre su estructuración y funcuonamiento a través de las instrucciones de sus administradores.
-Una de las primeras taeras que debemos aprender para trabajar con servidores remotos es cómo conectarnos, para ello usamos el comando ```ssh``` (security shell), este comando nos permite hacer una conexión segura desde la máquina local a la remota, muchas veces entregando una llave de seguridad entre el usuario (nosotros) y el servidor remoto, aquí una imala entrega de esta lalve de seguridad al ingresar por primera vez a un servidor remoto:
+Una de las primeras taeras que debemos aprender para trabajar con servidores remotos es cómo conectarnos, para ello usamos el comando ```ssh``` (security shell), este comando nos permite hacer una conexión segura desde la máquina local a la remota, una vez abierta la cuenta en el servidor remoto, el administrador del servidor nos otorgará un usuario y un password, en muchas ocasiones necesitaremos una dirección IP para poder establecer la conexión:
 
-![Key-print.png](https://github.com/lafabi/Genobiostoic/blob/main/Key-print.png)
+Para usuarios de servidores de alta capacidad tal como el caso del NHPCL de la Universidad De Chile, nuestro usuario lucirá así: 
 
-Al igual que nuestra máquina local, éstos servidores ofrecen la alternativa de correr scripts en el frontend, pero no es la mejor alternativa, dado que se ocupan los recursos informaticos de forma poco eficiente. En este caso, los servidores de alta capacidad tales como el NLHPC de la Universidad de Chile [https://www.nlhpc.cl/](https://www.nlhpc.cl/) o [Geryon https://www3.astro.puc.cl/geryon/](https://www3.astro.puc.cl/geryon) de la Universidad Católica funcionan con un sistema de planificador de tareas. Este sistema opera asignando filas y prioridades a las tareas según la capacidad de los recursos, administrando de mejor forma los recursos tales como memoria, núcleos, tiempo de ejecución de trabajos, etc. Estos scripts se corren en el backend, que es un espacio donde se llevan a cabo tareas en el sistema operativo oculto de fondo. En el próximo apartado hablaremos con más detalle de este sistema de administrador de trabajos. Por ahora veremos la arquitectura en la construcción de estos scripts: 
+```usuario@leftraru.nlhpc.cl```
+``` passw: XXXX```
+
+Para el caso particular de servidores de remotos que no son de alta capacidad debemos contar con la dirección IP, en este caso el usuario lucirá de esta forma:
+```usuario@146.155.227.140```
+```passw: XXXX```
+
+Para conectarnos basta colocar el comando ```ssh``` antes del usuario:
+
+```
+ssh usuario@leftraru.nlhpc.cl
+
+```
+Inmediatamente el servidor nos solicitará el password
+
+```usuario@146.155.227.140's password:```
+
+
+En ocasiones, la primera vez que nos conectamos a un servidor remoto, éste nos solicita compartir una llave de seguridad para establecer una conexión segura de intercambio de archivos y transferencia de información, para lo cual les aparecerá un diálogo en pantalla de la siguiente forma:
+
+
+
+![Key-print](https://github.com/lafabi/Genobiostoic/blob/main/Key-print.png)
+
+
+Al igual que nuestra máquina local, éstos servidores ofrecen la alternativa de correr scripts en el frontend, pero no es la mejor alternativa, dado que se ocupan los recursos informaticos de forma poco eficiente. En este caso, los servidores de alta capacidad tales como el NLHPC de la Universidad de Chile [https://www.nlhpc.cl/](https://www.nlhpc.cl/) o [Geryon https://www3.astro.puc.cl/geryon/](https://www3.astro.puc.cl/geryon) de la Universidad Católica funcionan con un sistema de planificador de tareas o Shedulers. Este sistema opera asignando filas y prioridades a las tareas según la capacidad de los recursos, administrando de mejor forma los recursos tales como memoria, núcleos, tiempo de ejecución de trabajos, etc. Estos scripts se corren en el backend, que es un espacio donde se llevan a cabo tareas en el sistema operativo oculto de fondo. En el próximo apartado hablaremos con más detalle de este sistema de administrador de trabajos. Por ahora veremos la arquitectura en la construcción de estos scripts: 
 
 Al igual que una carta, los scripts que se envían al backend tienen un "membrete" con una serie de intrucciones para el asistente "virtual", en ésta indicarán ciertas características de la tarea. 
 
@@ -33,7 +58,10 @@ El script que se envía al NLHPC de la Universidad de Chile tiene la siguente es
 # ----------------Comando--------------------------
 ```
 
+El *Toolchain* se refiere a las variables del entorno que se quieran definir para definir las rutas de archivos de entrada y rutas de archivos de salida y cómo pueden estar enlazados unos con otros.
 
+Los *Módulos* se refieren a unidades funcionales y estructurales que forman parte de programas o software diseñados para analizar datos.
+Los *Comandos* son las instrucciones que le otorgamos al sistema ejecutar bajo ciertos parámetros que el usuario diseña. Veremos más adelante con un ejemplo cómo contruir un script para la verificación de calidad de los genomas
 
 Dependendiendo de los recursos que requiera el trabajo (nodos, hilos, memoria, tiempo), se escoje la partición en el servidor y se agrega la información necesaria para construir el "membrete" del script de forma muy sencilla y amigable.Una vez realizado se copia y se pega en un editor de texto plano, se adiciona el código comando que se quiere ejecutar y se asigna un nombre (e este caso script2.sh) junto con la extensión del lenguaje en que se ha escrito el script (en este caso bash, .sh). 
 
@@ -45,3 +73,5 @@ $sbatch script2.sh
 Y automáticamente se genera un ID JOB
 
 $Submitted batch job 25489521
+
+Para más información acerca de las buenas prácticas y demás comandos para hacer seguimiento de los trabajos en los sistemas SLURM del NLHPC y Geryon, les recomendamos visitar las páginas anteriormente mencionadas y realizar los cursos de capacitación que ofrecen regularmente los administradores de estos servidores.
