@@ -17,7 +17,7 @@ md5sum  archivo.txt
 ```
 La imagen  tardará en imprimirse dependiendo del tamaño del archivo. Esta imagen se corroborará con la imagen original de donde originalmente se haya realizado la descarga. En este caso si los archivos son copia fie y exacta recibiremos un mensaje comoÑ
 
-```la imagen coinciden```
+```la imagen coincide```
 
 Una vez descargados los genomas de Zorros y verificado la imágenes correspondientes, procederemos a verificar la calidad de los genomas y para ello ocuparemos el programa ```FastQC```
 para efectos de este taller estarán instalados los programas en el servidor, éstos estarán disponibles a través de ```conda```
