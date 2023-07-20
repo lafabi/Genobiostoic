@@ -21,21 +21,11 @@ En esta etapa del taller comenzaremos a editar y generar varios archivos de impo
 
 GEN=/home/fleon/genomes/
 TRIM=/home/fleon/genomes/
-ADAPT=/home/fleon/fabi/
+ADAPT=/home/fleon/Adapt
 
-source $HOME/miniconda3/bin/activate
-conda activate assembly
-
-
-
-
- 
 source $HOME/miniconda3/bin/activate
 source activate assembly   
 
-trimmomatic PE -threads 10 -phred33 $GEN/${i}_R1.fastq.gz $GEN/${i}_R2.fastq.gz -baseout $TRIM/${i}.trim.fq ILLUMINACLIP:$ADAPT/TruSeq2OVR-PE.fa:2:30:10:1:true LEADING:3 TRAILING:3 MAXINFO:40:0.4 MINLEN:36
-
-done
-
+trimmomatic PE -threads 10 -phred33 $GEN/m2267sub2_R1.fastq.gz $GEN/m2267sub2_R2.fastq.gz -baseout $TRIM/m2267.trim.fq ILLUMINACLIP:$ADAPT/TruSeq2OVR-PE.fa:2:30:10:1:true LEADING:3 TRAILING:3 MAXINFO:40:0.4 MINLEN:36
 
 ```
