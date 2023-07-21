@@ -70,7 +70,7 @@ Dependendiendo de los recursos que requiera el trabajo (nodos, hilos, memoria, t
 
 Una vez generado el script se lanza al backend, o  gestor de trabajos SLURM,  de la siguiente forma
 ```
-$Sbatch script2.sh
+sbatch script2.sh
 ```
 
 Y automáticamente se genera un ID JOB
