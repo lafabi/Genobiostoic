@@ -2,15 +2,15 @@
 
 Existen varias formas de ejecutar una tarea o correr un programa en la terminal de  bash:
 
- 1) A través de la introducción de una linea de comando directa luego del prompt,con el código del programa que se pretende correr. Esta acción inutiliza la ventana de la terminal donde se introdujo el código hasta que se termine de ejecutar la tarea que se solicitó. Una solución a esto, sería ocupar el and person "&" al final del código, esto enviará el proceso en segundo plano y se activa el la posibilidad de continuar trabajando en la terminal. Al enviar el trabajo en segundo plano con el "&" el sistema imprimirá un código numérico en pantalla que indica el ID de la tarea que se envió al sistema y se podrá monitorizar a través su progreso con el comando ```htop```.
+ 1) A través de la introducción de una linea de comando directa luego del prompt, con el código del programa que se pretende correr. Esta acción inutiliza la ventana de la terminal donde se introdujo el código hasta que se termine de ejecutar la tarea que se solicitó. Una solución a esto, sería ocupar el ampersand "&" al final del código, esto enviará el proceso en segundo plano y se activa la posibilidad de continuar trabajando en la terminal. Al enviar el trabajo en segundo plano con el "&" el sistema imprimirá un código numérico en pantalla que indica el ID de la tarea que se envió al sistema y se podrá monitorizar a través su progreso con el comando ```htop```.
 
 ```
  htop
 ```
 
-#Scripts en la maquina local
+# Scripts en la maquina local
 
- 2) Por medio de un código escrito y almacenado en "script". Éste se define como un programa o código de programación escrito en un lenguaje específico (como R, Bash o Python),que se utiliza para realizar cálculos, análisis o procesamiento, en este caso paricular,de datos biológicos. Los scripts son herramientas fundamentales en en bioinformática, pues permiten, por ejemplo, automatizar tareas repetitivas a través de la aplicación de algoritmos.Dado que en el tutorial anterior aprendimos lineas de comando básicas en la terminal de Linux, haremos un script sencillo utilizando comandos ya conocidos. Para ello abriremos el editor de texto nano y tipearemos la orden de crear un directorio llamado sochigen de esta forma:
+ 2) Por medio de un código escrito y almacenado en "script". Éste se define como un programa o código de programación escrito en un lenguaje específico (como R, Bash o Python), que se utiliza para realizar cálculos, análisis o procesamiento, en este caso particular, de datos biológicos. Los scripts son herramientas fundamentales en bioinformática, pues permiten, por ejemplo, automatizar tareas repetitivas a través de la aplicación de algoritmos. Dado que en el tutorial anterior aprendimos líneas de comando básicas en la terminal de Linux, haremos un script sencillo utilizando comandos ya conocidos. Para ello abriremos el editor de texto nano y tipearemos la orden de crear un directorio llamado sochigen de esta forma:
     
 ```
 nano
@@ -26,7 +26,7 @@ Observaremos al listar de nuevo el contenido del directorio, que el nombre "scri
 
 Una vez realizado esto, podremos correr este script1 de varias formas:
 
-2.1) Directo en la terminal, al igual que el apartado anterior, esta forma inutilizará la ventana hasta que se complete el proceso, si se considera que se ejutará programas complejos se tardará aun más la operatividad de la ventana.De igual forma que el apartado anterior, se puede ocupar el and person "&" para correrlo en segundo plano.Para correr este script1.sh tipeamos en la terminal
+2.1) Directo en la terminal, al igual que el apartado anterior, esta forma inutilizará la ventana hasta que se complete el proceso, si se considera que se ejutarán programas complejos se tardará aun más la operatividad de la ventana. De igual forma que el apartado anterior, se puede ocupar el ampersand "&" para correrlo en segundo plano. Para correr este script1.sh tipeamos en la terminal.
 ```
 bash script1.sh
 ```
@@ -35,16 +35,16 @@ o
 bash script1.sh&
 ```
 
-2.2) Enviarlo al frontend (que es la interfaz con la que interactuamos en sistema operativo) a través de un comando "nohup" y redireccionar los archivos de reporte de salida de la siguiente forma:
+2.2) Enviarlo al frontend (que es la interfaz con la que interactuamos en el sistema operativo) a través de un comando "nohup" y redireccionar los archivos de reporte de salida de la siguiente forma:
 ```
 nohup ./script1.sh > script.out
 ```
 
-Es muy conveniente correr los scripts con tareas complejos a través de esta forma, dado que si se produjera un error en el procesamiento del análisis, saldría reportado en el archivo script.out que crea automáticamente esta alternativa, de hecho durante el tiempo de la corrida, se puede verificar el progreso en tiempo real del avance del programa.Para esto sólo debemos correr el siguiente comando para imprimir el contenido del archivo:
+Es muy conveniente correr los scripts con tareas complejas a través de esta forma, dado que si se produjera un error en el procesamiento del análisis saldría reportado en el archivo script.out, que crea automáticamente esta alternativa, de hecho durante el tiempo de la corrida se puede verificar el progreso en tiempo real del avance del programa. Para esto sólo debemos correr el siguiente comando para imprimir el contenido del archivo:
 ```
 cat script.out
 ```
-En ambos casos, al listar de nuevo el contenido del directorio donde estamos ubicados, aparecerá ya creado un directorio con el nombre "sochigen"
+En ambos casos, al listar de nuevo el contenido del directorio donde estamos ubicados, aparecerá ya creado un directorio con el nombre "sochigen".
 
 
 
