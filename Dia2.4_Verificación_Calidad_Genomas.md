@@ -58,14 +58,14 @@ cat FastQC_%j.out
 Aquí observaremos un diálogo que el proceso avanza en un 5, 10 y 15% prograsivamnete. Entre los comandos que nos permitirán hacer un seguimiento y comunicarnos con el backend tenemos los siguientes: 
 
 
-+ Sinfo : Muestra el estado de las particiones.
-+ Squeue - u : Muestra la cola de tareas.
-+ Scancel : Mata un trabajo.
-+ Sbatch : Corre un script en el backend.
-+ Srun : Corre un script en el frontend.
-+ Sacct -X : Muestra el estado de todas la tareas ejecutadas.
-+ Scontrol -dd show job IDtrabajo: Detalla la información de un trabajo. 
-+ Sstat : Dice la cantidad de recursos utilizados por un trabajo.
++ sinfo : Muestra el estado de las particiones.
++ squeue - u : Muestra la cola de tareas.
++ scancel : Mata un trabajo.
++ sbatch : Corre un script en el backend.
++ srun : Corre un script en el frontend.
++ sacct -X : Muestra el estado de todas la tareas ejecutadas.
++ scontrol -dd show job IDtrabajo: Detalla la información de un trabajo. 
++ sstat : Dice la cantidad de recursos utilizados por un trabajo.
 
 Una vez terminado la verificación de la calidad de los genomas, se creará en nuesto directorio  ```/home/fleon/genomes/QC``` archivos html
  y otros archivos .zip. A continuación realizaremos un resumen de estos análisis de calidad con el programa ``multiqc``. Dado que este programa es muy rápido y no ocupa muchos recursos lo enviaremos a correr en el frontend del servidor de la siguiente forma:
