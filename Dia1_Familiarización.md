@@ -77,11 +77,11 @@ El comando ```mv``` (move) permite cambiar de nombre de un archivo o directorio.
 
 
 ```
-mv pg43.txt libro1.txt
+mv pg43.txt libro.txt
 ```
 
 En este punto hemos dado una instrucción, mover o cambiar el nombre de un archivo (pg43.txt) por otro nombre de archivo (libro1.txt).
-El comando ```mv``` también permite mudar archivos entre directorios. Creemos un directorio anidado en Genobiostoic con ``mkdir`` llamado terminal, queremos mudar "libro.txt" desde Genobiostoic a Terminal, para ello escribamos el siguiente comando:
+El comando ```mv``` también permite mudar archivos entre directorios. Si queremos mudar "libro.txt" desde Genobiostoic a Terminal escribamos el siguiente comando:
 
 ```
 mv libro.txt Terminal/Libro
