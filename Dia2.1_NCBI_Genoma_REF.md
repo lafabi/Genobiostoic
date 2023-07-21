@@ -32,6 +32,7 @@ Rhinoderma darwinii
 
 
 
+
 | Scaffolds vs Cromosomas   | Número de Cromosomas parecido al modelo?|
 | --------------------------| --------------------------------------- |
 | Cobertura de Secuenciación| Qué tan lejanos son de nuestro modelo (filogenia)  |
