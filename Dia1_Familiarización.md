@@ -47,7 +47,7 @@ Verifiquemos que se haya creado el directorio Genobiostoic a través del comando
 ls
 ```
 
-Aquí observamos que se ha creado un nuevo directorio llamado Genobiostoic, su directorio parental es Documentos. Verifiquemos el sistema anidado y jerárquico de directorios con ``pwd``.
+Aquí observamos que se ha creado un nuevo directorio llamado Genobiostoic, su directorio parental es Documentos. Entremos al directorio con ``cd`` y verifiquemos el sistema anidado y jerárquico de directorios con ``pwd``.
 
 ```
 pwd
@@ -64,7 +64,7 @@ Ahora que tenemos creado un directorio llamado *Genobiostoic* construyamos esta 
 
 ## Descargar archivos
 
-Ahora que sabemos cómo crear directorios, moverslos entre ellos y listar su contenido, aprendamos a descargar archivos desde repositorios remotos a través de líneas de comando, para ello usaremos ```wget```. En esta oportunidad descargaremos el Libro de literatura inglesa clásica Dr. Jeckyll y Mr.Hyde a través de este comando: 
+Ahora que sabemos cómo crear directorios, moverslos entre ellos y listar su contenido, aprendamos a descargar archivos desde repositorios remotos a través de líneas de comando, para ello usaremos ```wget```. En esta oportunidad descargaremos el Libro de literatura inglesa clásica Dr. Jeckyll y Mr.Hyde en el directorio Genobiostoic a través de este comando: 
 
 
 ```
@@ -81,7 +81,7 @@ mv pg43.txt libro1.txt
 ```
 
 En este punto hemos dado una instrucción, mover o cambiar el nombre de un archivo (pg43.txt) por otro nombre de archivo (libro1.txt).
-El comando ```mv``` también permite mudar archivos entre directorios, si queremos mudar "libro.txt" desde Genobiostoic a Terminal escribamos:
+El comando ```mv``` también permite mudar archivos entre directorios. Creemos un directorio anidado en Genobiostoic con ``mkdir`` llamado terminal, queremos mudar "libro.txt" desde Genobiostoic a Terminal, para ello escribamos el siguiente comando:
 
 ```
 mv libro.txt Terminal/Libro
