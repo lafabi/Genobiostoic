@@ -3,7 +3,7 @@
 El Centro Nacional de Información Biotecnológica [NCBI](https://www.ncbi.nlm.nih.gov/) es una parte de la Biblioteca Nacional de Medicina de los Estados Unidos, la cual forma parte de los Institutos Nacionales de la Salud (NIH). El NCBI es un recurso integral de información en biología molecular y  desempeña un papel vital en el avance de la investigación en diversos campos de la biología, entre ellos la Genómica.
 El NCBI brinda acceso a diversas bases de datos y herramientas que son ampliamente utilizadas por científicos, investigadores y profesionales de la salud. Algunos de los recursos más conocidos ofrecidos por el NCBI incluyen:
 
-[NCBI Assembly](https://www.ncbi.nlm.nih.gov/assembly):  Este repositorio recopila, almacena y organiza secuencias genómicas en genomas completos o parciales dentro de las bases de datos de la plataforma del NCBI. Podemos encontrar secuenciación genómicas en bruto a nivel de contigs,scaffolds y cromosomas. Esta herramienta es la que utizaremos a continuación para descargar y analizar y escoger los genomas de referencias.
+[NCBI Assembly](https://www.ncbi.nlm.nih.gov/assembly):  Este repositorio recopila, almacena y organiza secuencias genómicas en genomas completos o parciales dentro de las bases de datos de la plataforma del NCBI. Podemos encontrar secuenciaciones genómicas en bruto a nivel de contigs, scaffolds y cromosomas. Esta herramienta es la que utizaremos a continuación para descargar y analizar y escoger los genomas de referencias.
 
 No menos importante son estas herramientas que se mencionan a continuación:
 
