@@ -170,13 +170,13 @@ Ahora vayamos más allá y busquemos (``grep``) un palabra (Compadre) y contemos
 grep Compadre verde.txt | wc -l
 ```
 
-En este apartado tendremos la oportunidad de descargar una tabla con ```wget``` y luego filtar con el comando ```awk``` la primera y segunda columna de la tabla. Esta herramienta en muy útil cuado se trabaja con archivos .xlx y .csv.
+En este apartado tendremos la oportunidad de descargar una tabla con ```wget``` y luego filtrar con el comando ```awk``` la primera y segunda columna de la tabla. Esta herramienta en muy útil cuando se trabaja con archivos .xlx y .csv.
 
 ```
 wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/010/085/365/GCA_010085365.1_BGI_Echrysoc_fil.V1/GCA_010085365.1_BGI_Echrysoc_fil.V1_assembly_stats.txt
 ```
 
-Para filtar la primera columna ocuparemos ```awk``` junto con algunos operadores como aparece a continuación:
+Para filtrar la primera columna ocuparemos ```awk``` junto con algunos operadores como aparece a continuación:
 
 
 ```
