@@ -91,7 +91,7 @@ mv libro.txt Terminal/Practica1
 Luego, verifiquemos que efectivamente hayamos mudado el archivo libro.txt al directorio indicado.
 
 ```
-cd Terminal/Libro
+cd Terminal/Practica1
 ls
 ```
 ```libro.txt```
