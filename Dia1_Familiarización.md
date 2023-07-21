@@ -84,7 +84,7 @@ En este punto hemos dado una instrucción, mover o cambiar el nombre de un archi
 El comando ```mv``` también permite mudar archivos entre directorios. Si queremos mudar "libro.txt" desde Genobiostoic a Practica1 escribamos el siguiente comando:
 
 ```
-mv libro.txt Terminal/Practica1
+mv libro.txt /Terminal/Practica1
 
 ```
 
