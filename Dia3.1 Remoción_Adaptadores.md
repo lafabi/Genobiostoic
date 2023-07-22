@@ -75,7 +75,6 @@ El script lo puede guardar con el nombre alusivo a la función de su contenido.
 ## Alineamiento de los reads contra el genoma de referencia. 
 
 ```
-
 #!/bin/bash
 #---------------Script SBATCH - NLHPC ----------------
 #SBATCH -J BWA
@@ -96,7 +95,7 @@ OUT=/home/fleon/genomes/
 source $HOME/miniconda3/bin/activate
 source activate assembly   
 
-bwa mem -t 5 -M -R '@RG\tID:name\tLB:lib1\tPL:ILLUMINA' $REF/dog_index $TRIM/m2267.trim_1P.fq $TRIM/m2267.trim_2P.fq > $OUT/m2267.sam 
+bwa mem -t 5 -M -R '@RG\tID:m2267\tLB:m2267\tPL:ILLUMINA\tPU:A00354\tSM:m2267' $REF/dog_index $TRIM/m2267.trim_1P.fq $TRIM/m2267.trim_2P.fq > $OUT/m2267.sam 
 
 ```
 
