@@ -24,14 +24,14 @@ Inmediatamente el servidor nos solicitará el password.
 ```usuario@146.155.227.140's password:```
 
 
-En ocasiones, la primera vez que nos conectamos a un servidor remoto, éste nos solicita compartir una llave de seguridad para establecer una conexión segura de intercambio de archivos y transferencia de información, para lo cual les aparecerá un diálogo en pantalla de la siguiente forma:
+En ocasiones, la primera vez que nos conectamos a un servidor remoto, éste nos solicita compartir una llave de seguridad para establecer una conexión segura de intercambio de archivos y transferencia de información, de esta forma puede aparecer un diálogo en pantalla y aceptaremos tipeando un *s*
+
+Una vez conectado en el servidor, entraremos al *home* del usuario hospedero, que en este caso es ```fleon```. Al ingresar listaremos el contenido del directorio con ```ls``` y veremos el siguiente contenido: 
+
+![Z.png](https://github.com/lafabi/Genobiostoic/blob/main/Z.png)
 
 
-
-![Key-print](https://github.com/lafabi/Genobiostoic/blob/main/Key-print.png)
-
-
-Una vez conectado en el servidor, entraremos al home/ de nuestro usuario, y para cada participante crearemos un usuario con nuestro nombre para trabajar cada uno en nuestro directorio, para fines de este taller.
+nos cambiaremos al directorio *usuarios* y para cada participante crearemos un directorio con su nombre usando ```mkdir``` 
 
 
 Al igual que nuestra máquina local, éstos servidores ofrecen la alternativa de correr scripts en el frontend, pero no es la mejor alternativa, dado que se ocupan los recursos informaticos de forma poco eficiente. En este caso, los servidores de alta capacidad tales como el NLHPC de la Universidad de Chile [https://www.nlhpc.cl/](https://www.nlhpc.cl/) o [Geryon https://www3.astro.puc.cl/geryon/](https://www3.astro.puc.cl/geryon) de la Universidad Católica funcionan con un sistema de planificador de tareas o Schedulers. Este sistema opera asignando filas y prioridades a las tareas según la capacidad de los recursos, administrando de mejor forma los recursos tales como memoria, núcleos, tiempo de ejecución de trabajos, etc. Estos scripts se corren en el backend, que es un espacio donde se llevan a cabo tareas en el sistema operativo oculto de fondo. En el próximo apartado hablaremos con más detalle de este sistema de administrador de trabajos. Por ahora veremos la arquitectura en la construcción de estos scripts: 
