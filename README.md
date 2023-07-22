@@ -1,5 +1,5 @@
 # Genobiostoic
-Taller para estudiantes de pregrado o postgrado cuyo objetivo principal o secundario involucre estudios genómicos. Se realizará entre el 30 de Julio y el 03 de Agosto en las Instalaciones de la Facultad de Ciencias Físicas y Matemáticas de La Universidad de Chile, Beauchef, 851. 
+Taller para estudiantes de pregrado o postgrado cuyo objetivo principal o secundario involucre estudios genómicos. Se realizará entre el 31 de Julio y el 03 de Agosto en las Instalaciones de la Facultad de Ciencias Físicas y Matemáticas de La Universidad de Chile, Beauchef, 851. 
 
 Este workshop está orientado para estudiantes que no poseen experiencia en el área de la genómica, así otorgará las herramientas básicas y necesarias para iniciar el trabajo en el área de la bioinformática, especialmente para el resecuenciamiento o ensamblaje de genomas a partir de genomas de referencia. Estará estructurado de la siguiente forma:
 
