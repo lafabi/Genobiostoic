@@ -1,11 +1,17 @@
-# Escogencia del genoma de referencia y los repositorios de Genomas: Dia 2
+# Genoma de referencia para la reconstrucción de genomas a partir de lecturas cortas: Dia 2
 
-El Centro Nacional de Información Biotecnológica [NCBI](https://www.ncbi.nlm.nih.gov/) es una parte de la Biblioteca Nacional de Medicina de los Estados Unidos, la cual forma parte de los Institutos Nacionales de la Salud (NIH). El NCBI es un recurso integral de información en biología molecular y  desempeña un papel vital en el avance de la investigación en diversos campos de la biología, entre ellos la Genómica.
+Existen dos principales formas de reconstruir genomas: 1) A patir de genomas de Referencias y 2) A partir de un ensamblaje *de novo*.
+
+En este tutorial nos enfocaremos en realizar el ejercicio de reconstrucción de genomas a partir de  **genomas de referencia** en lecturas cortas (short reads).
+ 
+## Dónde encuentro los genomas de Referencia: Repositorios de Genomas.
+
+El Centro Nacional de Información Biotecnológica [NCBI](https://www.ncbi.nlm.nih.gov/) es una parte de la Biblioteca Nacional de Medicina de los Estados Unidos, la cual forma parte del Instituto Nacional de la Salud (NIH). El NCBI es un recurso integral de información en biología molecular y  desempeña un papel vital en el avance de la investigación en diversos campos de la biología, entre ellos la Genómica.
 El NCBI brinda acceso a diversas bases de datos y herramientas que son ampliamente utilizadas por científicos, investigadores y profesionales de la salud. Algunos de los recursos más conocidos ofrecidos por el NCBI incluyen:
 
-[NCBI Assembly](https://www.ncbi.nlm.nih.gov/assembly):  Este repositorio recopila, almacena y organiza secuencias genómicas en genomas completos o parciales dentro de las bases de datos de la plataforma del NCBI. Podemos encontrar secuenciaciones genómicas en bruto a nivel de contigs, scaffolds y cromosomas. Esta herramienta es la que utizaremos a continuación para descargar y analizar y escoger los genomas de referencias.
+[NCBI Assembly](https://www.ncbi.nlm.nih.gov/assembly):  Este repositorio recopila, almacena y organiza **secuencias genómicas en genomas completos** o parciales dentro de las bases de datos de la plataforma del NCBI. Podemos encontrar secuenciaciones genómicas en bruto a nivel de contigs, scaffolds y cromosomas. Esta herramienta es la que utizaremos a continuación para descargar y analizar y escoger los genomas de referencias.
 
-No menos importante son estas herramientas que se mencionan a continuación:
+Mencionamos además estas herramientas que ofrece el NCBI de relevante importancia:
 
 [GenBank](https://www.ncbi.nlm.nih.gov/genbank/): Una base de datos de secuencias genéticas que recopila y almacena secuencias de ADN y ARN de diversos organismos. GenBank sirve como un repositorio central para los datos de secuencias generados por investigadores de todo el mundo.
 
@@ -13,7 +19,10 @@ No menos importante son estas herramientas que se mencionan a continuación:
 
 [PubMed](https://pubmed.ncbi.nlm.nih.gov/): Una base de datos de literatura biomédica que contiene millones de citas y resúmenes de revistas científicas. Es una herramienta valiosa para realizar búsquedas bibliográficas y mantenerse al día con las últimas investigaciones.
 
+Si trabajas con conservación biológica, también te puede interesar los siguientes repositorios de genomas: 
 
+> https://www.dnazoo.org/
+> https://vertebrategenomesproject.org/
 
 
 ## Busquemos Genomas de referencias de las siguientes especies no modelo en el [NCBI Assembly](https://www.ncbi.nlm.nih.gov/assembly)
