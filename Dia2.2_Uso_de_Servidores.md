@@ -6,7 +6,7 @@ Una de las primeras tareas que debemos aprender para trabajar con servidores rem
 
 Para usuarios de servidores de alta capacidad tal como el caso del NLHPC de la Universidad De Chile, nuestro usuario lucirá así: 
 
-```usuario@leftraru.nlhpc.cl```
+```fleon@leftraru.nlhpc.cl```
 ``` passw: XXXX```
 
 Para el caso particular de servidores de remotos que no son de alta capacidad debemos contar con la dirección IP, en este caso el usuario lucirá de esta forma:
