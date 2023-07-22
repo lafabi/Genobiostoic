@@ -74,6 +74,34 @@ El script lo puede guardar con el nombre alusivo a la función de su contenido.
 
 ## Alineamiento de los reads contra el genoma de referencia. 
 
+```
+
+#!/bin/bash
+#---------------Script SBATCH - NLHPC ----------------
+#SBATCH -J BWA
+#SBATCH -p general
+#SBATCH -n 5
+#SBATCH -c 1
+#SBATCH --mem-per-cpu=4250
+#SBATCH --mail-user=email
+#SBATCH --mail-type=ALL
+#SBATCH -t 2-2:2:5
+#SBATCH -o BWA_%j.out
+#SBATCH -e BWA_%j.err
+
+REF=/home/fleon/genomes/Index
+TRIM=/home/fleon/genomes/
+OUT=/home/fleon/genomes/
+
+source $HOME/miniconda3/bin/activate
+source activate assembly   
+
+bwa mem -t 5 -M -R '@RG\tID:name\tLB:lib1\tPL:ILLUMINA' $REF/dog_index $TRIM/m2267.trim_1P.fq $TRIM/m2267.trim_2P.fq > $OUT/m2267.sam 
+
+```
+
+
+
 
 > + sinfo : Muestra el estado de las particiones.
 > + squeue - u : Muestra la cola de tareas.
