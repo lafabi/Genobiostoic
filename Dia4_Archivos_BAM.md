@@ -43,7 +43,7 @@ BAM=/home/fleon/genomes/
 source $HOME/miniconda3/bin/activate
 source activate assembly   
 
-samtools sort -o $SORTBAM/m2267sorted.bam -@ 40 $BAM/m2267.bam
+samtools sort -o $SORTBAM/m2267.sorted.bam -@ 40 $BAM/m2267.bam
 
 ```
 
