@@ -20,7 +20,7 @@ BAM=/home/fleon/genomes/
 source $HOME/miniconda3/bin/activate
 source activate assembly   
 
-samtools view -q 10 -f 0x2 -bSh -@ 5 $SAM/m2267.sam > BAM/m2267.bam 
+samtools view -q 10 -f 0x2 -bSh -@ 5 $SAM/m2267.sam > $BAM/m2267.bam 
 ```
 
 ```
