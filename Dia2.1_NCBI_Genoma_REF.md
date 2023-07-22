@@ -21,11 +21,23 @@ Mencionamos además estas herramientas que ofrece el NCBI de relevante importanc
 
 Si trabajas con conservación biológica, también te puede interesar los siguientes repositorios de genomas: 
 
-> https://www.dnazoo.org/
-> https://vertebrategenomesproject.org/
+> + https://www.dnazoo.org/
+> + https://vertebrategenomesproject.org/
 
 
-## Busquemos Genomas de referencias de las siguientes especies no modelo en el [NCBI Assembly](https://www.ncbi.nlm.nih.gov/assembly)
+### Consideraciones para escoger Genoma de referencia
+
+Dependiendo de la pregunta de tu proyecto existirán ciertos atributos de los genoma de referencia disponibles que deberás revisar y escoger, Entre ellos:  
+
+> + Nivel de ensamblaje: Scaffolds vs Cromosomas
+> + Cariotipaje según tu modelo de estudio: Número de Cromosomas parecido al modelo?
+> + Calidad de Cobertura: Cobertura de Secuenciación
+> + Relación Filogenética con tu modelo de estudio: Qué tan emparentados estan con nuestro modelo de estudio
+> + Representación del formato del Genoma en el Repositorio: Formato GenBank vs RefSeq
+> + Consideraciones sobre la Tecnología de secuenciación: Ilumina, PacBio, etc.
+
+
+## Busquemos Genomas de referencias de las siguientes especies en el [NCBI Assembly](https://www.ncbi.nlm.nih.gov/assembly)
 
 ```
 Pudu puda
@@ -36,23 +48,14 @@ Spheniscus humboldti
 ```
 Rhinoderma darwinii
 ```
+```
+Zorrito de Darwin
+```
 
-### Consideraciones para escoger Genoma de referencia
-
-
-
-> + Scaffolds vs Cromosomas
-> + Número de Cromosomas parecido al modelo?
-> + Cobertura de Secuenciación
-> +  Qué tan lejanos son de nuestro modelo (filogenia)
-> +  Formato GenBank vs RefSeq
-> + Tecnología de secuenciación 
+Con base en estas consideraciones,hagamos un ejercicio práctico para buscar genomas de Referencia 
 
 
-
-
-
-Construye una tabla comparativa entre los atributos de cada uno de los posibles genomas de referencia encontrados en el NCBI. En caso que no existan genoma de referencias de los modelos propuestos, cuáles otros pudieras escoger y por qué?. A continuación mostraremos un diagrama con base en la toma de decisiones que debiéramos tomar en consideración a la hora de escoger el genoma de referencia y que estaría sujeto a nustra pregunta de investigación.
+Construye una tabla comparativa entre los atributos de cada uno de los posibles genomas de referencia encontrados en el NCBI. En caso que no existan genoma de referencias de los modelos propuestos, cuáles otros pudieras escoger y por qué?. A continuación mostraremos un diagrama con base en la toma de decisiones que debiéramos tomar en consideración a la hora de escoger el genoma de referencia. Ten en consideración que la escogencia dependerá de tu pregunta de investigación.
 
 
 ![Pregunta-proyecto](https://github.com/lafabi/Genobiostoic/blob/main/Pregunta-proyecto.png)
