@@ -14,7 +14,7 @@ En esta etapa del taller comenzaremos a editar y generar varios archivos de impo
 #SBATCH --mem-per-cpu=4250
 #SBATCH --mail-user=email
 #SBATCH --mail-type=ALL
-#SBATCH -t 2-2:2:5
+#SBATCH -t 2:2:5
 #SBATCH -o Trimmomatic_%j.out
 #SBATCH -e Trimmomatic_%j.err
 
@@ -85,7 +85,7 @@ El script lo puede guardar con el nombre alusivo a la función de su contenido.
 #SBATCH --mem-per-cpu=4250
 #SBATCH --mail-user=email
 #SBATCH --mail-type=ALL
-#SBATCH -t 2-2:2:5
+#SBATCH -t 2:2:5
 #SBATCH -o BWA_%j.out
 #SBATCH -e BWA_%j.err
 
