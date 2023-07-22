@@ -20,7 +20,7 @@ Muchas veces nos resultará útil saber en qué carpeta estamos (desde ahora lla
 ```
  pwd
 ```
-```/home/fabiola```
+```/home/usuario```
 
 Generalmente cuando ingresamos por primera vez a la terminal, el sistema nos redirige al home del usuario. Será conveniente cambiarnos de directorio y para ello usaremos el comando ``cd`` (change directory).
 
@@ -33,7 +33,7 @@ Ahora verifiquemos que nos cambiamos de directorio con pwd.
 ```
 pwd
 ```
-```/home/fabiola/Documentos```
+```/home/usuario/Documentos```
 
 Dado que nos cambiamos a Documentos, ahora creémos un subdirectorio dentro de Documentos con el comando ``mkdir`` (make directory).
 
@@ -52,7 +52,7 @@ Aquí observamos que se ha creado un nuevo directorio llamado Genobiostoic, su d
 ```
 pwd
 ```
-```/home/fabiola/Documentos/Genobiostoic```
+```/home/usuario/Documentos/Genobiostoic```
 
 En la terminal, las rutas relativas y absolutas se utilizan para especificar la ubicación de un archivo o directorio en el sistema de archivos. Una ruta absoluta, como su nombre lo indica, es una ruta completa que comienza desde la raíz o home  del sistema de archivos y especifica la ubicación exacta de un archivo o directorio, en Linux toda ruta absoluta comienza con un slash (/). Por el contrario, una ruta relativa especifica la ubicación de un archivo o directorio en relación con la ubicación actual. No comienza con un slash (/) y depende la ruta donde se encuentre el usuario.
 
