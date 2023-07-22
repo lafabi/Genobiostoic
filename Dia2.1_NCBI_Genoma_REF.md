@@ -1,6 +1,6 @@
 # Genoma de referencia para la reconstrucción de genomas a partir de lecturas cortas: Dia 2
 
-Existen dos principales formas de reconstruir genomas: 1) A patir de genomas de Referencias y 2) A partir de un ensamblaje *de novo*.
+Existen dos principales formas de reconstruir genomas: 1) A patir de genomas de referencias y 2) A partir de  ensamblajes *de novo*.
 
 En este tutorial nos enfocaremos en realizar el ejercicio de reconstrucción de genomas a partir de  **genomas de referencia** en lecturas cortas (short reads).
  
