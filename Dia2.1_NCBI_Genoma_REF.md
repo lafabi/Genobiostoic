@@ -61,7 +61,7 @@ Construye una tabla comparativa entre los atributos de cada uno de los posibles 
 ![Pregunta-proyecto](https://github.com/lafabi/Genobiostoic/blob/main/Pregunta-proyecto.png)
 
 
-## Descarguemos el genoma de referencia de la perrita boxer **Tasha** desde el servidor remoto del NCBI a nuestra máquina remota en el directorio Genobiostoic/NCBI/Genomas, este genoma de referencia es el que ocuparemos para ensamblar nuestros genomas de especie no modelo. Usaremos el siguiente comando: 
+### Descarguemos el genoma de referencia de la perrita boxer **Tasha** desde el servidor remoto del NCBI a nuestra máquina remota en el directorio Genobiostoic/NCBI/Genomas, este genoma de referencia es el que ocuparemos para ensamblar nuestros genomas de especie no modelo. Usaremos el siguiente comando: 
 
 ```
 wget --recursive -e robots=off --reject "index.html" --no-host-directories --cut-dirs=6 https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/002/285/GCF_000002285.5_Dog10K_Boxer_Tasha/GCF_000002285.5_Dog10K_Boxer_Tasha_genomic.fna.gz
