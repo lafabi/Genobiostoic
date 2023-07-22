@@ -49,7 +49,7 @@ Spheniscus humboldti
 Rhinoderma darwinii
 ```
 ```
-Zorrito de Darwin
+Lycalopex fulvipex
 ```
 
 Con base en estas consideraciones,hagamos un ejercicio práctico para buscar genomas de Referencia 
