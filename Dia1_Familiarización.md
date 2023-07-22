@@ -35,7 +35,7 @@ pwd
 ```
 ```/home/fabiola/Documentos```
 
-Dado que nos cambiamos a Documentos, ahora creemos un subdirectorio dentro de Documentos con el comando ``mkdir`` (make directory).
+Dado que nos cambiamos a Documentos, ahora creémos un subdirectorio dentro de Documentos con el comando ``mkdir`` (make directory).
 
 ```
 mkdir Genobiostoic
