@@ -64,7 +64,7 @@ Ahora que tenemos creado un directorio llamado *Genobiostoic* construyamos esta 
 
 ## Descargar archivos
 
-Ahora que sabemos cómo crear directorios, moverslos entre ellos y listar su contenido, aprendamos a descargar archivos desde repositorios remotos a través de líneas de comando, para ello usaremos ```wget```. En esta oportunidad descargaremos el Libro de literatura inglesa clásica Dr. Jeckyll y Mr.Hyde en el directorio Genobiostoic a través de este comando: 
+Ahora que sabemos cómo crear directorios, mover entre ellos y listar su contenido, aprendamos a descargar archivos desde repositorios remotos a través de líneas de comando, para ello usaremos ```wget```. En esta oportunidad descargaremos el Libro de literatura inglesa clásica Dr. Jeckyll y Mr.Hyde en el directorio Genobiostoic a través de este comando: 
 
 
 ```
@@ -84,20 +84,20 @@ En este punto hemos dado una instrucción, mover o cambiar el nombre de un archi
 El comando ```mv``` también permite mudar archivos entre directorios. Si queremos mudar "libro.txt" desde Genobiostoic a Practica1 escribamos el siguiente comando:
 
 ```
-mv libro.txt Terminal/Practica1
+mv libro.txt Terminal/Libro
 
 ```
 
 Luego, verifiquemos que efectivamente hayamos mudado el archivo libro.txt al directorio indicado.
 
 ```
-cd Terminal/Practica1
+cd Terminal/Libro
 ls
 ```
 ```libro.txt```
 
 
-Si queremos imprimir en pantalla el libro ocupamos el comando ```cat```, este nos mostrará todo el libro sin la posibilidad de editarlo. 
+Si queremos imprimir **todo** el libro en pantalla ocupamos el comando ```cat```, este nos mostrará todo el libro sin la posibilidad de editarlo. 
 
 A continuación haremos una práctica más extensa con diversos comandos para interactuar con distintos tipos de archivos.
 
@@ -110,7 +110,7 @@ Lo primero que haremos en esta sección será crear un archivo con un editor de 
 nano
 ```
 
-A continuación se abre una ventana en la que podemos pegar, tipear y/o editar el texto que deseemos. Presionando ^x salimos del editor de texto nano y regresamos a la terminal. Ahora que sabemos invocar el editor de texto procedamos a crear un documento de texto plano .txt llamado verde. Para ello copiemos el poema de Federico García Lorca (Disponible al final de esta sección) y seguidamente invoquemos ```nano``` y creemos al mismo tiempo el documento con su nombre y extensión:
+A continuación se abre una ventana en la que podemos pegar, tipear y/o editar el texto que deseemos. Presionando ^x salimos del editor de texto nano y regresamos a la terminal. Ahora que sabemos invocar el editor de texto procedamos a crear un documento de texto plano **.txt** llamado *verde*. Para ello copiemos el poema de Federico García Lorca (Disponible al final de esta sección) y seguidamente invoquemos ```nano``` y creémos al mismo tiempo el documento con su nombre y extensión:
 
 ```
 nano verde.txt
@@ -164,11 +164,12 @@ grep verde verde.txt
 
 Aquí, vale la pena resaltar que dimos una instrucción distinta, ordenamos buscar (``grep``) una palabra (verde) en un archivo (verde.txt). De esta forma diseñamos la sintaxis de un programa un poco más complejo que los anteriores.
 
-Ahora vayamos más allá y busquemos (``grep``) un palabra (Compadre) y contemos cuántas veces se repite con ``wc`` (word count).
+Ahora vayamos más allá y busquemos (``grep``) un palabra (*Compadre*) y contemos cuántas veces se repite con ``wc`` (word count).
 
 ```
 grep Compadre verde.txt | wc -l
 ```
+
 
 En este apartado tendremos la oportunidad de descargar una tabla con ```wget``` y luego filtrar con el comando ```awk``` la primera y segunda columna de la tabla. Esta herramienta en muy útil cuando se trabaja con archivos .xlx y .csv.
 
