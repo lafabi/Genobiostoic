@@ -14,7 +14,7 @@ Existen varias formas de ejecutar una tarea o correr un programa en la terminal 
     
 ```
 nano
-mkdir sochigen
+mkdir Genobiostoic
 ```
 
 
@@ -44,7 +44,7 @@ Es muy conveniente correr los scripts con tareas complejas a través de esta for
 ```
 cat script.out
 ```
-En ambos casos, al listar de nuevo el contenido del directorio donde estamos ubicados, aparecerá ya creado un directorio con el nombre "sochigen".
+En ambos casos, al listar de nuevo el contenido del directorio donde estamos ubicados, aparecerá ya creado un directorio con el nombre "Genobiostoic".
 
 
 
