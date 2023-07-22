@@ -36,9 +36,9 @@ Una vez diseñado el script abrimos ``` nano ``` y escogemos un nombre alusivo a
 sbatch trimming.sh
 ```
 
-En este punto, monitorizaremos dos cosas, 1) la verificación de la corrida en el backend a través del comando ```squeue``` y 2) verificando que se generen los archivos de salidas en los directorios que redirigimos en la ruta del script.
+En este punto, monitorizaremos varios aspectos de la tarea, 1) la verificación de la corrida en el backend a través del comando ```squeue``` o ```qstat``` 2) verificando la generación de los archivos de salidas en los directorios de la ruta del script, 3) Que los archivos *.fq*  que se están generando vayan aumentando de peso con el comando ```du -sh *.fq``` y 4) Monitorizando la tarea en tiempo real, imprimiendo en pantalla el archivo *.err* a través del comando ```cat```
 
-Los archivos de salida de esta corrida tendrán 4 tipos de extensiones .1U, .2U, .1P, .2P, el prefijo de cada uno de estos archivos será el mismo del nombre de los genomas tal como los definimos en el script, en este caso particular *m2267*. Estas extensiones *U* y *P* se refieren a reads que están pareados *.P* y los que no están pareados *.U*. Recordemos que en el proceso de secuenciación se hacen lecturas en un sentido y otras en antisentido. De esta forma, tendremos reads o lecturas simples (sólo en un sentido) o lecturas pareadas (en un sentido y antisentido).
+Los archivos de salida de esta corrida tendrán 4 tipos de extensiones *.1U.fq, .2U.fq, .1P.fq, .2P.fq,*  el prefijo de cada uno de estos archivos será el mismo del nombre de los genomas tal como los definimos en el script, en este caso particular *m2267*. Estas extensiones *U* y *P* se refieren a reads que están pareados *.P* y los que no están pareados *.U*. Recordemos que en el proceso de secuenciación se hacen lecturas en un sentido y otras en antisentido. De esta forma, tendremos reads o lecturas simples (sólo en un sentido) o lecturas pareadas (en un sentido y antisentido).
 
 ## Indexación del Genoma de Referencia para alineamiento
 
