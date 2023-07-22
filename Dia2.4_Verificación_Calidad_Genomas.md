@@ -16,7 +16,7 @@ Los genomas estarán depositados en el siguiente directorio ```/home/fleon/genom
 ```
 #!/bin/bash
 #---------------Script SBATCH - NLHPC ----------------
-#SBATCH -J FastQC-zorro
+#SBATCH -J FastQC-tunombre
 #SBATCH -p general
 #SBATCH -n 1
 #SBATCH -c 1
