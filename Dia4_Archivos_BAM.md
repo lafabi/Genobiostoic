@@ -23,6 +23,7 @@ source activate assembly
 samtools view -q 10 -f 0x2 -bSh -@ 5 $SAM/m2267.sam > $BAM/m2267.bam 
 ```
 
+
 ```
 #!/bin/bash
 #---------------Script SBATCH - NLHPC ----------------
