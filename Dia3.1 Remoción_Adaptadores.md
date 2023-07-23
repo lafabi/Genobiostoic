@@ -26,7 +26,7 @@ ADAPT=/home/fleon/Adapt
 source $HOME/miniconda3/bin/activate
 source activate assembly   
 
-trimmomatic PE -threads 10 -phred33 $GEN/m2267sub2_R1.fastq.gz $GEN/m2267sub2_R2.fastq.gz -baseout $TRIM/m2267.trim.fq ILLUMINACLIP:$ADAPT/TruSeq2OVR-PE.fa:2:30:10:1:true LEADING:3 TRAILING:3 MAXINFO:40:0.4 MINLEN:36
+trimmomatic PE -threads 5 -phred33 $GEN/m2267sub2_R1.fastq.gz $GEN/m2267sub2_R2.fastq.gz -baseout $TRIM/m2267.trim.fq ILLUMINACLIP:$ADAPT/TruSeq2OVR-PE.fa:2:30:10:1:true LEADING:3 TRAILING:3 MAXINFO:40:0.4 MINLEN:36
 
 ```
 
