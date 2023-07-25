@@ -41,7 +41,7 @@ Dado que nos cambiamos a Documentos, ahora creémos un subdirectorio dentro de D
 mkdir Genobiostoic
 ```
 
-Verifiquemos que se haya creado el directorio Genobiostoic a través del comando ``ls`` (list). 
+Verifiquemos que se haya creado el directorio Genobiostoic a través del comando ``ls`` (list).
 
 ```
 ls
@@ -64,7 +64,7 @@ Ahora que tenemos creado un directorio llamado *Genobiostoic* construyamos esta 
 
 ## Descargar archivos
 
-Ahora que sabemos cómo crear directorios, mover entre ellos y listar su contenido, aprendamos a descargar archivos desde repositorios remotos a través de líneas de comando, para ello usaremos ```wget```. En esta oportunidad descargaremos el Libro de literatura inglesa clásica Dr. Jeckyll y Mr.Hyde en el directorio Genobiostoic a través de este comando: 
+Ahora que sabemos cómo crear directorios, mover entre ellos y listar su contenido, aprendamos a descargar archivos desde repositorios remotos a través de líneas de comando, para ello usaremos ```wget```. En esta oportunidad descargaremos el Libro de literatura inglesa clásica Dr. Jeckyll y Mr.Hyde en el directorio Genobiostoic a través de este comando:
 
 
 ```
@@ -97,7 +97,7 @@ ls
 ```libro.txt```
 
 
-Si queremos imprimir **todo** el libro en pantalla ocupamos el comando ```cat```, este nos mostrará todo el libro sin la posibilidad de editarlo. 
+Si queremos imprimir **todo** el libro en pantalla ocupamos el comando ```cat```, este nos mostrará todo el libro sin la posibilidad de editarlo.
 
 A continuación haremos una práctica más extensa con diversos comandos para interactuar con distintos tipos de archivos.
 
@@ -215,7 +215,7 @@ las cosas la están mirando
 
 y ella no puede mirarlas.
 
- 
+
 
 Verde que te quiero verde.
 
@@ -253,7 +253,7 @@ Compadre, vengo sangrando
 
 desde los puertos de Cabra.
 
- 
+
 
 Si yo pudiera, mocito,
 
@@ -299,7 +299,7 @@ Barandales de la luna
 
 por donde retumba el agua.
 
- 
+
 
 Ya suben los dos compadres
 
@@ -317,7 +317,7 @@ Mil panderos de cristal,
 
 herían la madrugada.
 
- 
+
 
 Verde que te quiero verde,
 
@@ -343,7 +343,7 @@ cara fresca, negro pelo,
 
 en esta verde baranda!
 
- 
+
 
 Sobre el rostro del aljibe,
 
@@ -374,3 +374,240 @@ El barco sobre la mar.
 Y el caballo en la montaña.
 
 ```
+
+
+# ACTIVIDAD PRACTICA: Introducción al uso de la terminal
+
+Por [Dra. María José Frugone](https://orcid.org/0000-0002-8302-0386)
+------------------------------------------------------------------------------
+
+La finalidad de este tutorial es poner en practica los comandos aprendidos en la primera sección explorando datos genómicos. Además aprenderemos otras herramientas.
+La idea general es mostrar las posibilidades que existen cuando uno trabaja con la terminal, haciendo un barrido de los comandos. Ello para que sea una base sobre la cual, en el futuro, podamos utilizarlos incorporando argumentos y mirando sus opciones en el manual.
+
+En particular, exploraremos como utilizar los siguientes comandos y herramientas:
+
+| Comando o herramienta | Función                                               |
+|-----------------------|-------------------------------------------------------|
+| pwd                   | Imprimir el working directory                         |
+| ls                    | Listar archivos y carpetas                            |
+| cd                    | Cambiar de directorio                                 |
+| mkdir                 | Crear directorio                                      |
+| man                   | Ver manual de un comando                              |
+| curl                  | Bajar datos de internet                               |
+| unzip                 | Descomprimir archivos                                 |
+| rm                    | Eliminar archivos o directorios                       |
+| mv                    | Mover o cambiar nombre de archivos o directorios      |
+| head                  | Ver el contenido inicial de un archivo                |
+| tail                  | Ver el contenido final de un archivo                  |
+| wc                    | Contar el número de líneas y caracteres de un archivo |
+| grep                  | Buscar elementos en un archivo                        |
+| >                     | Redireccionar un resultado a un archivo               |
+| nano                  | Editor de texto                                       |
+| pipe                  | Redireccionar un resultado a otro comando             |
+| cat                   | Concatenar el contenido de distintos archivos         |
+
+
+
+## ¿Dónde nos encontramos? ***pwd***
+
+Para iniciar revisemos la ubicación en la que nos encontramos con ***pwd***.
+Si no nos encontramos en escritorio movámonos con ***cd*** hasta llegar a ese directorio, utilizando *cd* + la ruta al directorio escritorio o desktop.
+
+>**Nota**: El *Path* corresponde a la ruta o descripción para llegar a un determinado directorio o archivo. En esa ruta se separan los directorios utilizando un slash (/) entre cada uno de ellos. Si se trata de un archivo, la ***ruta*** terminará con el nombre del archivo.
+
+>**Ruta absoluta:** Corresponde a la ruta completa, desde la raíz hacia un directorio o archivo determinado. Por ejemplo:
+
+    /Users/mariajose/Desktop/data
+
+>**Ruta relativa:** Corresponde a una ruta en relación a otro directorio. Por ejemplo, si me encuentro trabajando en *mi usuario* la ruta relativa a la carpeta *data* de la **Figura 1** sería:
+
+## Crear directorios con ***mkdir***
+
+Crearemos una nueva carpeta en escritorio que se denomine *Tutorial*. Dentro de ella crearemos un directorio *data*. Para esto ocuparemos el comando *mkdir* y *cd* para situarnos en la carpeta data, que será la ubicación  donde guardaremos los genómicos como se muestra en la **Figura 3**.
+Para ocupar este comando simplemente debemos tipear *mkdir* seguido del nombre de la carpeta que deseamos crear.
+
+>**Nota**: No incluir nunca espacios en blanco en los nombres de archivos y directorios, generan problemas para moverse en la terminal.
+
+
+**Figura 3.-** Crear directorios utilizando *mkdir*
+
+![mkdir](shell3.png)
+
+>**Nota**: En los siguientes recuadros se muestran los comandos de este tutorial seguido del prompt (símbolo %). Los escritos iniciados por el símbolo hash (#) son comentarios que no se ejecutan.
+
+Un ejemplo para la Figura 3, sería el siguiente:
+
+
+    # Iniciemos moviéndonos a Desktop
+
+    % cd Desktop
+
+    # Creemos la carpeta tutorial y movámonos hacia ese directorio
+
+    % mkdir Tutorial
+    % cd Tutorial
+
+    # Creemos la carpeta data y movámonos hacia ese directorio
+
+    % mkdir data
+    % cd data
+
+    # Imprimamos la ruta absoluta del directorio
+
+    % pwd
+    /Users/mariajose/Desktop/Tutorial/data
+
+
+## Conocer más sobre las funciones de los comandos usando ***man***
+
+Desde esa ubicación (~/Desktop/Tutorial/data), bajaremos los datos utilizando el comando ***curl***. Pero antes demos una mirada al manual de curl utilizando el comando ***man***.
+El comando ***man*** nos permite acceder al manual de los comando ejecutados en la terminal. En ello encontraremos una descripción general de su uso y los argumentos u opciones los acompañan y confieren atributos especiales a cada uno de ellos.
+
+    % man curl
+
+Con ello se despliega la información de la herramienta y como utilizarla (**Figura 4**). En este caso se puede ver que ***curl*** nos permite transferir datos desde o hacia un servidor.
+
+![man curl](curlman.png)
+**Figura 4** Página manual de ***curl***
+
+para salir del manual simplemente tipearemos
+
+    % q
+
+## Descargar archivos de internet utilizando ***curl***
+
+Bien, ahora se utilizará ***curl*** para bajar los [datos genomicos del pingüino Emperador (*Aptenodytes forsteri*) desde el repositorio NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000699145.1/), en nuestro *working directory* que en este caso es ~/Desktop/Tutorial/data.
+
+
+>**Nota**: El *working directory* corresponde al directorio actual en el que nos encontramos trabajando.
+
+
+    % curl -OJX GET "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000699145.1/download?include_annotation_type=GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000699145.1.zip" -H "Accept: application/zip"
+
+
+## Descomprimir archivos con ***unzip***
+
+Ese comando debería bajar el archivo GCF_000699145.1.zip. Para descomprimirlo utilizaremos el comando unzip:
+
+    % unzip GCF_000699145.1.zip
+
+En el cuadro de diálogo se indican los archivos descomprimidos con la ruta relativa hacia ellos. Veámoslo todo en la terminal:
+
+![unzip](unzip.png)
+
+## Eliminar archivos con ***rm***
+
+Vemos que los archivos quedaron almacenado en el directorio *~/Desktop/Tutorial/data/ncbi_dataset/data/GCF_000699145.1*.
+Ahora que descomprimimos nuestro archivo, podemos eliminarlo y así liberar espacio utilizando el comando ***rm***:
+
+    % rm GCF_000699145.1.zip
+
+
+## Renombrar y/o mover archivos y carpetas con ***mv***
+
+Como se mencionó previamente, al descomprimir nuestros datos, quedaron almacenados en la carpeta GCF_000699145.1*, dentro de dos otros directorios. Podría ser de nuestro interés cambiar el nombre del directorio y moverlo a nuestro directorio de trabajo. Cambiemos el nombre y movámoslo 2 directorios hacia atrás, para que quede en nuestro *working directory*. Para ello ocuparemos un único comando, *mv*, que nos permite mover o bien re-nombrar directorios o archivos. Para ello indicamos *mv* + nombre actual + nuevo nombre (o ruta):
+
+    # Naveguemos al directorio data y modifiquemos el nombre del directorio a emperadordata:
+
+    % cd ncbi_dataset/data/
+    % mv GCF_000699145.1 emperadordata
+
+    # Ahora movamos la carpeta a nuestro directorio data (dos directorios atrás).
+
+    % mv emperadordata ../..
+
+Listo! ahora tenemos nuestros datos de pingüino Emperador en la carpeta data. Liberemos más espacio removiendo el directorio ncbi_dataset. para ello utilizaremos el comando ***rm***, pero con el argumento *-r*, que nos permitirá eliminar un directorio:
+
+    % rm -r ncbi_dataset/
+
+    # si tipeamos ahora ls, se verá que el directorio ncbi_dataset/ fue removido.
+
+
+## Explorar el inicio y fin de un archivo con ***head y tail***
+
+Exploremos los archivos que hemos bajado, para ello ocuparemos el comando *head* que nos muestra la parte inicial de nuestro archivo. Probemos con nuestro archivo de regiones codificantes (cds):
+
+    % head cds_from_genomic.fna
+
+y si queremos ver las primeras 1000 lineas del documento?
+Fácil! Sólo debemos agregar el argumento ***-n*** con el número de líneas que queremos ver:
+
+    % head -n 1000 cds_from_genomic.fna
+
+de la misma manera, si quisiéramos ver las últimas líneas de un documento, podemos utilizar el comando ***tail***
+
+    % tail -n 1000 cds_from_genomic.fna
+
+## Contar el número de líneas y caracteres con ***wc***
+
+También podemos explorar cuántos caracteres y líneas tiene nuestro documento, utilizando **wc** y sus distintas opciones
+
+    # número de líneas
+
+    % wc -l cds_from_genomic.fna
+
+    # número de caracteres
+
+    % wc -m cds_from_genomic.fna
+
+Recuerda que siempre puedes ver más opciones en el manual, tipeando en este caso *man wc*
+
+
+## Buscar patrones con ***grep*** y redirigir resultados con ***>***
+
+En nuestro archivo vemos que tenemos una serie de secuencias precedidas por información tal como el gen, gen ID y otros y que el encabezado se inicia con el símbolo >.
+
+![head](head.png)
+
+Para extraer sólo esa información y dejar de lado las secuencias, podemos utilizar el comando ***grep***. ***grep*** es una herramienta que nos permite buscar palabras o caracteres determinados en un archivo y los imprime en la pantalla.
+
+    % grep ">" cds_from_genomic.fna
+
+Ello imprimirá en la terminal todas las líneas que contengan el símbolo >.
+Podemos guardar esta información en un archivo de texto, re-dirigiendo el resultado del comando grep, utilizando el símbolo *mayor qué* > seguido del archivo de texto que queremos crear:
+
+    % grep ">" cds_from_genomic.fna > datoscds.txt
+
+Ahora tenemos un nuevo archivo en nuestra carpeta *data* denominado datoscds.txt.
+
+## Editor de texto ***nano***
+
+Daremos un vistazo a ese nuevo archivo utilizando ***nano***. ***Nano*** es un editor de texto que nos permite abrir y modificar archivos. Para utilizarlo, sólo debemos tipear *nano* seguido del nombre del archivo que queremos abrir:
+
+    % nano datoscds.txt
+
+ Podemos ver ahí toda la información que transferimos desde el comando grep. Exploremos las opciones de nano, escribamos un título a nuestro archivo y guardémoslo.
+
+![nano](nano.png)
+
+En la parte inferior de la ventana, se indican las opciones de **nano**, a las cuales se accede con control+ la opción que elijamos. Por ejemplo, si queremos guardar los cambios en nuestro archivo, pulsamos control+O. En ese momento nano preguntará el nombre del archivo donde queremos guardar los datos. Este se puede modifical o mantener. Si pulsamos *enter* se guardarán los cambios en nuestro mismo archivo inicial. Ahora podemos salir de nano pulsando control+x.
+
+
+Bien, volvamos a nuestros datos genómicos. Con los comandos que hemos aprendido, ¿cómo podríamos saber cuántas secuencias codificantes tiene nuestro archivo? **SI**, utilizando **grep** con el argumento -c, lo que nos dará como resultado el número de líneas que presentan el símbolo ">".
+
+    % grep -c ">" cds_from_genomic.fna
+
+
+## Redirigir con ***Pipe***
+
+Esto también lo podemos realizar con una combinación de ***grep*** y ***wc*** sin embargo para ello, tenemos que re-dirigir el resultado de un comando para que se transforme en input del siguiente comando, lo que se puede lograr usando el ***pipe***. ***pipe*** hace referencia al símbolo | el cual separa las operaciones que vamos a unir mediante los distintos comandos para tener un único resultado. Por ejemplo
+
+    # Primero se indica con grep la búsqueda de todas las líneas que presenten el simbolo ">". Luego con | que, indicamos que a partir de ese resultado (que no se imprime en la pantalla), el comando wc con el algumento -l, imprima el número total de líneas encontradas por grep. Este comando entregará el mismo resultado obtenido anteriormente con grep -c.
+
+    % grep ">" cds_from_genomic.fna | wc -l
+
+    # este resultado también se puede re-dirigir a un archivo de texto:
+
+    % grep ">" cds_from_genomic.fna | wc -l > cdstotal.txt
+
+    # y se puede comprobar el resultado usando head
+
+    % head cdstotal.txt
+
+## Concatenar con ***cat***
+
+Bien, la última actividad de este tutorial será unir los resultados que obtuvimos respecto al número total de cds, con los encabezados de nuestras secuencias, de manera que toda la información quede en un único archivo. para usando el comando cat. Para ello utilizamos cat, seguido de los archivos que queremos concatenar y se utiliza > para redirigirlo a un nuevo archivo de texto:
+
+    % cat cdstotal.txt datoscds.txt > infocds.txt
+
+En este archivo final tendremos el número total de cds, nuestro título y luego los encabezados.
