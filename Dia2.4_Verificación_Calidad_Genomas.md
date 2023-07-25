@@ -1,4 +1,4 @@
-# Verificación de Calidad de lo Genomas en el servidor NLHPC
+# Verificación de calidad de reads en el servidor NLHPC
 
 Para verificar la calidad de los genomas, primero hay que recibirlos de la plataforma de secuenciación y luego subirlos a los servidores de alta capacidad, existen varias formas de transferir los archivos al servidor. Supongamos que tenemos los siguientes genomas de zorros m2267sub2_R1.fastq.gz, m2267sub2_R2.fastq.gz, m2293sub2_R1.fastq.gz y m2293sub2_R2.fastq.gz contenidos un directorio de nuestra máquina local y los queremos subir al servidor remoto del NLHPC con destino al directorio /home/fleon/genomes, ocuparemos el comando ```rsync``` junto con otros operadores de la siguiente forma:
 
