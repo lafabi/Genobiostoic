@@ -431,7 +431,7 @@ Para ocupar este comando simplemente debemos tipear *mkdir* seguido del nombre d
 
 **Figura 3.-** Crear directorios utilizando *mkdir*
 
-![mkdir](shell3.png)
+![mkdir](Shell3.png)
 
 >**Nota**: En los siguientes recuadros se muestran los comandos de este tutorial seguido del prompt (símbolo %). Los escritos iniciados por el símbolo hash (#) son comentarios que no se ejecutan.
 
