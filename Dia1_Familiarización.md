@@ -378,7 +378,6 @@ Y el caballo en la montaña.
 
 # ACTIVIDAD PRACTICA: Introducción al uso de la terminal
 
-Por [Dra. María José Frugone](https://orcid.org/0000-0002-8302-0386)
 ------------------------------------------------------------------------------
 
 La finalidad de este tutorial es poner en practica los comandos aprendidos en la primera sección explorando datos genómicos. Además aprenderemos otras herramientas.
