@@ -1,17 +1,19 @@
 # Verificación de calidad de reads en el servidor NLHPC
 
-Para verificar la calidad de los genomas, primero hay que recibirlos de la plataforma de secuenciación y luego subirlos a los servidores de alta capacidad, existen varias formas de transferir los archivos al servidor. Supongamos que tenemos los siguientes genomas de zorros m2267sub2_R1.fastq.gz, m2267sub2_R2.fastq.gz, m2293sub2_R1.fastq.gz y m2293sub2_R2.fastq.gz contenidos un directorio de nuestra máquina local y los queremos subir al servidor remoto del NLHPC con destino al directorio /home/fleon/genomes, ocuparemos el comando ```rsync``` junto con otros operadores de la siguiente forma:
+Para verificar la calidad de los genomas, primero hay que recibirlos de la plataforma de secuenciación y luego subirlos a los servidores de alta capacidad. Existen varias formas de transferir los archivos al servidor, que se mencionarán a continuación. Supongamos que tenemos los siguientes genomas de zorros, m2267sub2_R1.fastq.gz, m2267sub2_R2.fastq.gz, m2293sub2_R1.fastq.gz y m2293sub2_R2.fastq.gz contenidos un directorio de nuestra máquina local, y los queremos subir al servidor remoto del NLHPC con destino al directorio /home/fleon/genomes. Para realizar esta tarea, ocuparemos el comando ```rsync``` junto con otros operadores de la siguiente forma:
 
 ```
 rsync -azvrP -e Zorros/ ssh fleon@leftraru.nlhpc.cl:/home/fleon/ 
 
 ```
 
-Al trabajar con datos genómicos, muchas veces grandes en peso y también numerosos, conviene estar atentos a que las transferencias se hagan de forma correcta, es decir que los archivos no estén *truncados*. Para ello, el comando ```rsync``` no solamente nos permite transferir archivos, sino que además nos verifica la imagen de integridad de la transferencia, de esta forma, si se llegara a interrumpir la conexión de transferencia, se recupera la información ya transferida al ejecutar el mismo comando otra vez y continuaría la transferencia de datos desde el punto donde se interrumpió.
+>**Nota**: El comando, bajo el formato en el que está descrito, debe ejecutarse desde la carpeta Zorros, contenida en la máquina local. A grandes rasgos, el comando está indicando que se transifera todo lo contenido en la carpeta Zorros hacia la carpeta fleon, presente en el servidor remoto.
 
-Ya una vez transferidos los genomas de Zorros al servidor (esto ya lo hemos hecho para ahorar tiempo) continuaremos comprobando la calidad de los genomas. Para ello ocuparemos el programa ```FastQC``` que para efectos de este taller ya están instalados en el servidor a través del gestor de paquetes llamado ```conda```.
+Al trabajar con datos genómicos, muchas veces grandes en peso y también numerosos, conviene estar atentos a que las transferencias se hagan de forma correcta, es decir que los archivos no estén *truncados*. Para ello, el comando ```rsync``` no solamente nos permite transferir archivos, sino que además nos verifica la imagen de integridad de la transferencia. De esta forma, si se llegara a interrumpir la conexión de transferencia, se recupera la información ya transferida al ejecutar el mismo comando otra vez, continuando la transferencia de datos desde el punto donde se interrumpió.
 
-Los genomas estarán depositados en el siguiente directorio ```/home/fleon/genomes/``. Crearemos un directorio dentro de nuestro usuario denominado QC/, con esto ya estamos listos para construir nuestro primer Script y enviarlo a través del scheduler SLURM al backend: 
+Ya una vez transferidos los genomas de Zorros al servidor (esto ya lo hemos hecho para ahorar tiempo), pasaremos al primer "análsis", que es comprobar la calidad de los genomas. Para ello ocuparemos el programa ```FastQC```, que para efectos de este taller ya está instalado en el servidor a través del gestor de paquetes llamado ```conda```.
+
+Los genomas estarán depositados en el siguiente directorio ```/home/fleon/genomes/``. Crearemos un directorio dentro de nuestro usuario denominado QC/. Con esto, ya estamos listos para construir nuestro primer Script y enviarlo a través del *scheduler* SLURM al backend: 
 
 ```
 #!/bin/bash
@@ -44,7 +46,7 @@ cat FastQC_%j.out
 
 ```
 
-Aquí observaremos un diálogo que el proceso avanza en un 5, 10 y 15% progresivamnete. Entre los comandos que nos permitirán hacer un seguimiento y comunicarnos con el backend tenemos los siguientes: 
+Aquí observaremos un diálogo que indica que el proceso avanza en un 5, 10 y 15% progresivamente. Entre los comandos que nos permitirán hacer un seguimiento y comunicarnos con el backend tenemos los siguientes: 
 
 
 + sinfo : Muestra el estado de las particiones.
@@ -56,17 +58,16 @@ Aquí observaremos un diálogo que el proceso avanza en un 5, 10 y 15% progresiv
 + scontrol -dd show job IDtrabajo: Detalla la información de un trabajo. 
 + sstat : Dice la cantidad de recursos utilizados por un trabajo.
 
-Una vez terminado la verificación de la calidad de los genomas, se creará en nuesto directorio  ```/home/fleon/usuarios/tunombre/QC``` archivos html
- y otros archivos .zip. A continuación realizaremos un resumen de estos análisis de calidad con el programa ``multiqc``. Dado que este programa es muy rápido y no ocupa muchos recursos lo enviaremos a correr en el frontend del servidor de la siguiente forma:
+Una vez terminado la verificación de la calidad de los genomas, se creará en nuesto directorio  ```/home/fleon/usuarios/tunombre/QC``` archivos html y otros archivos .zip. A continuación, realizaremos un resumen de estos análisis de calidad con el programa ``multiqc``, que también se encuentra instalado en el servidor. Dado que este programa es muy rápido y no ocupa muchos recursos, lo enviaremos a correr en el frontend del servidor de la siguiente forma:
 
 ```
 source $HOME/miniconda3/bin/activate
 multiqc QC/
 ```
 
-Inmediatamente aparecerá un diálogo de la ejecución dl programa ``multiqc``
+Inmediatamente aparecerá un diálogo de la ejecución del programa ``multiqc``
 
-Al igual que ``fastqc`` se generará un archivo html que NO podremos visualizar en el servidor, de forma que debemos descargarlo a la máquina local a través del siguiente comando. Para ello nos ubicamos en el directorio de la maquina local Genobiostoic/Terminal/Practica2 y ejecutamos este comando:
+Al igual que ``fastqc``, se generará un archivo html que NO podremos visualizar en el servidor, de forma que debemos descargarlo a la máquina local a través del siguiente comando. Para ello nos ubicamos en el directorio de la maquina local Genobiostoic/Terminal/Practica2 y ejecutamos este comando:
 
 ```
 rsync -azvrP -e  ssh fleon@leftraru.nlhpc.cl:/home/fleon/genomes/usuarios/tunombre/multiqc.html ./
