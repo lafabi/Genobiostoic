@@ -24,6 +24,8 @@ $chmod +x script1.sh
 ```
 Observaremos, al listar de nuevo el contenido del directorio, que el nombre "script1.sh" ha cambiado de color, indicativo de que el documento que acabamos de crear ahora puede ser ejecutado como un programa con una instrucción específica de realizar una tarea.
 
+>**Nota**: Siempre es recomendable asignar al script un nombre relacionado con su función, con el propósito de evitar confusiones.
+
 Una vez realizado esto, podremos correr este script1 de varias formas:
 
 2.1) Directo en la terminal; al igual que el apartado anterior, esta forma inutilizará la ventana hasta que se complete el proceso. Si se considera que se ejecutarán programas complejos se tardará aun más la operatividad de la ventana. De igual forma que el apartado anterior, se puede ocupar el ampersand "&" para correrlo en segundo plano. Para correr este script1.sh tipeamos en la terminal:
