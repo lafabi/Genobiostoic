@@ -7,7 +7,7 @@ rsync -azvrP -e Zorros/ ssh fleon@leftraru.nlhpc.cl:/home/fleon/
 
 ```
 
-Al trabajar con datos genómicos, muchas veces grandes en peso y también numerosos, conviene estar atentos a que las transferencias se hagan de forma correcta, es decir que los archivos so estén *truncados*. Para ello, el comando ```rsync``` no solamente nos permite transferir archivos, sino que además nos verifica la imagen de integridad de la transferencia, de esta forma, si se llegara a interrumpir la conexión de transferencia, se recupera la información ya transferida al ejecutar el mismo comando otra vez y continuaría la transferencia de datos desde el punto donde se interrumpió.
+Al trabajar con datos genómicos, muchas veces grandes en peso y también numerosos, conviene estar atentos a que las transferencias se hagan de forma correcta, es decir que los archivos no estén *truncados*. Para ello, el comando ```rsync``` no solamente nos permite transferir archivos, sino que además nos verifica la imagen de integridad de la transferencia, de esta forma, si se llegara a interrumpir la conexión de transferencia, se recupera la información ya transferida al ejecutar el mismo comando otra vez y continuaría la transferencia de datos desde el punto donde se interrumpió.
 
 Ya una vez transferidos los genomas de Zorros al servidor (esto ya lo hemos hecho para ahorar tiempo) continuaremos comprobando la calidad de los genomas. Para ello ocuparemos el programa ```FastQC``` que para efectos de este taller ya están instalados en el servidor a través del gestor de paquetes llamado ```conda```.
 
