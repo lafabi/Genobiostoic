@@ -3,7 +3,7 @@ Taller para estudiantes de pregrado, postgrado, postdoctorados o académicos en 
 
 Este workshop está orientado para estudiantes que no poseen experiencia en el área de genómica ni bioinformática, así otorgará las herramientas básicas y necesarias para iniciar las tareas fundamentales, orientado especialmente para la reconstrucción de genomas a partir de genomas de referencia. Estará estructurado de la siguiente forma:
 
-Día 1: Familiarización del uso de la terminal bash en sistema operativo linux,aprendizaje de comandos básicos.Contrucción de scripts para el frontend.
+Día 1: Familiarización del uso de la terminal bash en sistema operativo linux,aprendizaje de comandos básicos.Construcción de scripts para el frontend.
 
 Día 2 : Herramientas genómicas de secuenciación: Cómo se generan los reads genómicos?.Consideraciones generales para la escogencia de genomas de referencia,atributos de los genomas de referencias.Uso de servidores de alta eficiencia (HPC), diseño, construcción de scripts de backend, uso de schedulers y verificación de la calidad de genomas completos
 
