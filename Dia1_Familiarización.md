@@ -4,7 +4,7 @@
 
 La "Shell" es una interfaz gráfica que opera a través de líneas de comando. Éstos comandos son, de por sí, programas que actúan como interlocutores o intérpretes entre sistemas complejos y nosotros. Entre sus principales atributos destacan su capacidad de multitarea y multiusuario. La característica multitarea, como su nombre lo indica, permite realizar más de una función o tarea simultáneamente en varias ventanas o pestañas. Por otra parte, el rasgo multiusuario permite realizar distintas tareas a más de una persona en la misma terminal simultánemente.
 
-Como mencionamos con anterioridad, nos podemos comunicar con el sistema operativo a través de un interlocutor, los comandos. Ahora, comenzaremos a aprender un lenguaje que nos permitirá interactuar y dar instrucciones al sistema para la ejecución de una tarea. Usualmente, los comandos son acrónimos de palabras en inglés y se definen según la función que desempeñan.
+Como mencionamos con anterioridad, nos podemos comunicar con el sistema operativo a través de un interlocutor; los comandos. Ahora, comenzaremos a aprender un lenguaje que nos permitirá interactuar y dar instrucciones al sistema para la ejecución de una tarea. Usualmente, los comandos son acrónimos de palabras en inglés y se definen según la función que desempeñan.
 
 Primero hagamos un saludo al sistema operativo, haciendo que se imprima en la pantalla a través del comando ``echo`` (es un eco de lo que quieres imprimir en pantalla).
 
@@ -35,7 +35,7 @@ pwd
 ```
 ```/home/usuario/Documentos```
 
-Dado que nos cambiamos a Documentos, ahora creémos un subdirectorio dentro de Documentos con el comando ``mkdir`` (make directory).
+Dado que nos cambiamos a Documentos, ahora creémos un subdirectorio llamado Genobiostoic dentro de Documentos con el comando ``mkdir`` (make directory).
 
 ```
 mkdir Genobiostoic
@@ -57,7 +57,7 @@ pwd
 ```
 ```/home/usuario/Documentos/Genobiostoic```
 
-En la terminal, las rutas relativas y absolutas se utilizan para especificar la ubicación de un archivo o directorio en el sistema de archivos. Una ruta absoluta, como su nombre lo indica, es una ruta completa que comienza desde la raíz o home  del sistema de archivos y especifica la ubicación exacta de un archivo o directorio. En Linux toda ruta absoluta comienza con un slash (/). Por el contrario, una ruta relativa especifica la ubicación de un archivo o directorio en relación con la ubicación actual. No comienza con un slash (/) y depende la ruta donde se encuentre el usuario.
+En la terminal, las rutas relativas y absolutas se utilizan para especificar la ubicación de un archivo o directorio en el sistema de archivos. Una ruta absoluta, como su nombre lo indica, es una ruta completa que comienza desde la raíz o home del sistema de archivos y especifica la ubicación exacta de un archivo o directorio. En Linux toda ruta absoluta comienza con un slash (/). Por el contrario, una ruta relativa especifica la ubicación de un archivo o directorio en relación con la ubicación actual. No comienza con un slash (/) y depende la ruta donde se encuentre el usuario.
 
 
 Ahora que tenemos creado un directorio llamado *Genobiostoic* construyamos esta jerarquía de archivos:
@@ -67,7 +67,7 @@ Ahora que tenemos creado un directorio llamado *Genobiostoic* construyamos esta 
 
 ## Descargar archivos
 
-Ahora que sabemos cómo crear directorios, movernos entre ellos y listar su contenido, aprendamos a descargar archivos desde repositorios remotos a través de líneas de comando, para ello usaremos ```wget```. En esta oportunidad descargaremos el Libro de literatura inglesa clásica Dr. Jeckyll y Mr.Hyde en el directorio Genobiostoic a través de este comando:
+Ahora que sabemos cómo crear directorios, movernos entre ellos y listar su contenido, aprendamos a descargar archivos desde repositorios remotos a través de líneas de comando. Para ello usaremos ```wget```. En esta oportunidad descargaremos el Libro de literatura inglesa clásica Dr. Jeckyll y Mr.Hyde en el directorio Genobiostoic a través de este comando:
 
 
 ```
