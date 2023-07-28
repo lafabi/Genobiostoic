@@ -10,7 +10,7 @@ Existen varias formas de ejecutar una tarea o correr un programa en la terminal 
 
 # Scripts en la maquina local
 
-2) Por medio de un código escrito y almacenado en un archivo de texto plano *script*. Éste se define como un programa o código de programación escrito en un lenguaje específico (como R, Bash o Python), que se utiliza para realizar cálculos, análisis o procesamiento, en este caso particular, de datos biológicos. Los scripts son herramientas fundamentales en bioinformática, pues permiten, por ejemplo, automatizar tareas repetitivas a través de la aplicación de algoritmos. Dado que en el tutorial anterior aprendimos líneas de comando básicas en la terminal de Linux, haremos un script sencillo utilizando comandos ya conocidos. Para ello abriremos el editor de texto nano y tipearemos la orden de crear un directorio llamado Genobiostoic de la siguiente forma:
+2) Por medio de un código escrito y almacenado en un archivo de texto plano *script*. Éste se define como un programa o código de programación escrito en un lenguaje específico (como R, Bash o Python), que se utiliza para realizar cálculos, análisis o procesamiento, en este caso particular, de datos biológicos. Los scripts son herramientas fundamentales en bioinformática, pues permiten, por ejemplo, automatizar tareas repetitivas a través de la aplicación de algoritmos. Dado que en el tutorial anterior aprendimos líneas de comando básicas en la terminal de Linux, haremos un script sencillo utilizando comandos ya conocidos. Para ello abriremos el editor de texto nano y, una vez abierto, tipearemos la orden de crear un directorio llamado Genobiostoic de la siguiente forma:
     
 ```
 nano
@@ -26,7 +26,7 @@ Observaremos, al listar de nuevo el contenido del directorio, que el nombre "scr
 
 Una vez realizado esto, podremos correr este script1 de varias formas:
 
-2.1) Directo en la terminal; al igual que el apartado anterior, esta forma inutilizará la ventana hasta que se complete el proceso. Si se considera que se ejecutarán programas complejos se tardará aun más la operatividad de la ventana. De igual forma que el apartado anterior, se puede ocupar el ampersand "&" para correrlo en segundo plano. Para correr este script1.sh tipeamos en la terminal.
+2.1) Directo en la terminal; al igual que el apartado anterior, esta forma inutilizará la ventana hasta que se complete el proceso. Si se considera que se ejecutarán programas complejos se tardará aun más la operatividad de la ventana. De igual forma que el apartado anterior, se puede ocupar el ampersand "&" para correrlo en segundo plano. Para correr este script1.sh tipeamos en la terminal:
 ```
 bash script1.sh
 ```
