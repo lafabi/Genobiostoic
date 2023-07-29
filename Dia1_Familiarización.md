@@ -64,6 +64,7 @@ Ahora que tenemos creado un directorio llamado *Genobiostoic* construyamos esta 
 
 ![Jerarquía de directorios](https://github.com/lafabi/Genobiostoic/blob/main/Jerarquia_Dir.png)
 
+**Figura 1.-** Jerarquía de directorios
 
 ## Descargar archivos
 
@@ -125,7 +126,7 @@ Ahora peguemos el poema de Federico Garcia Lorca dentro del documento en nano, g
 ls
 ```
 
-En este punto aprenderemos varios comandos que nos permitiran interactuar con estos archivos. Como vimos, el programa ```nano``` nos confiere el permiso de editar o modificar el documento. Ahora bien, muchas veces queremos ver el documento, es decir, imprimir el contenido en la pantalla sin que sea modificado. Para esto ocupamos el comando ``cat`` (concat):
+En este punto aprenderemos varios comandos que nos permitirán interactuar con estos archivos. Como vimos, el programa ```nano``` nos confiere el permiso de editar o modificar el documento. Ahora bien, muchas veces queremos ver el documento, es decir, imprimir el contenido en la pantalla sin que sea modificado. Para esto ocupamos el comando ``cat`` (concat):
 
 ```
 cat verde.txt
@@ -156,10 +157,10 @@ También, podemos imprimir el final de un documento con el comando ``tail``.
 tail verde.txt
 ```
 
-Al igual que ``head``, ``tail`` acepta la función ``-n`` y podemos imprimir el *número* de lineas que deseemos, contando desde el final hacia el principio del documento.
+Al igual que ``head``, ``tail`` acepta la función ``-n`` y podemos imprimir el número de lineas que deseemos, contando desde el final hacia el principio del documento.
 
 
-Cuando se trabajan con datos Genómicos, muchas veces queremos buscar, ubicar o filtrar ciertos loci, cromosomas, individuos, etc dentro de un archivo, para ello ocupamos el comando ``grep`` (globally search for regular expression and print out). En este ejemplo buscaremos la palabra verde en el texto verde.txt, para ello tipearemos:
+Cuando se trabajan con datos Genómicos, muchas veces queremos buscar, ubicar o filtrar ciertos loci, cromosomas, individuos, etc, dentro de un archivo. Para ello ocupamos el comando ``grep`` (globally search for regular expression and print out). En este ejemplo buscaremos la palabra verde en el texto verde.txt, para ello tipearemos:
 
 ```
 grep verde verde.txt
@@ -421,23 +422,25 @@ Si no nos encontramos en escritorio movámonos con ***cd*** hasta llegar a ese d
 
     /Users/mariajose/Desktop/data
 
->**Ruta relativa:** Corresponde a una ruta en relación a otro directorio. Por ejemplo, si me encuentro trabajando en *mi usuario* la ruta relativa a la carpeta *data* de la **Figura 1** sería:
+>**Ruta relativa:** Corresponde a una ruta en relación a otro directorio. Por ejemplo, si me encuentro trabajando en *mi usuario* la ruta relativa a la carpeta *data* del ejemplo anterior sería:
+
+    Desktop/data
 
 ## Crear directorios con ***mkdir***
 
-Crearemos una nueva carpeta en escritorio que se denomine *Tutorial*. Dentro de ella crearemos un directorio *data*. Para esto ocuparemos el comando *mkdir* y *cd* para situarnos en la carpeta data, que será la ubicación  donde guardaremos los genómicos como se muestra en la **Figura 3**.
+Crearemos una nueva carpeta en escritorio que se denomine *Tutorial*. Dentro de ella crearemos un directorio *data*. Para esto ocuparemos el comando *mkdir* y *cd* para situarnos en la carpeta data, que será la ubicación  donde guardaremos los genómicos como se muestra en la **Figura 2**.
 Para ocupar este comando simplemente debemos tipear *mkdir* seguido del nombre de la carpeta que deseamos crear.
 
 >**Nota**: No incluir nunca espacios en blanco en los nombres de archivos y directorios, generan problemas para moverse en la terminal.
 
 
-**Figura 3.-** Crear directorios utilizando *mkdir*
-
 ![mkdir](Shell3.png)
+
+**Figura 2.-** Crear directorios utilizando *mkdir*
 
 >**Nota**: En los siguientes recuadros se muestran los comandos de este tutorial seguido del prompt (símbolo %). Los escritos iniciados por el símbolo hash (#) son comentarios que no se ejecutan.
 
-Un ejemplo para la Figura 3, sería el siguiente:
+Un ejemplo para la Figura 2, sería el siguiente:
 
 
     # Iniciemos moviéndonos a Desktop
