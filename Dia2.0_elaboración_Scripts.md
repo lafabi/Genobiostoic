@@ -46,7 +46,7 @@ Es muy conveniente correr los scripts con tareas complejas a través de esta for
 ```
 cat script.out
 ```
-En ambos casos, al listar de nuevo el contenido del directorio donde estamos ubicados, aparecerá ya creado un directorio con el nombre "Genobiostoic".
+En ambos casos, al listar de nuevo el contenido del directorio donde estamos ubicados, aparecerá ya creado un directorio con el nombre "Prueba".
 
 
 
