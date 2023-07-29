@@ -2,7 +2,7 @@
 
 **¿Qué es la terminal Bash o Shell?**
 
-La "Shell" es una interfaz gráfica que opera a través de líneas de comando. Éstos comandos son, de por sí, programas que actúan como interlocutores o intérpretes entre sistemas complejos y nosotros. Entre sus principales atributos destacan su capacidad de multitarea y multiusuario. La característica multitarea, como su nombre lo indica, permite realizar más de una función o tarea simultáneamente en varias ventanas o pestañas. Por otra parte, el rasgo multiusuario permite realizar distintas tareas a más de una persona en la misma terminal simultánemente.
+La "Shell" es una interfaz de usuario que opera a través de líneas de comando. Estos comandos son, de por sí, programas que actúan como interlocutores o intérpretes entre sistemas complejos y nosotros. Entre sus principales atributos destacan su capacidad de multitarea y multiusuario. La característica multitarea, como su nombre lo indica, permite realizar más de una función o tarea simultáneamente en varias ventanas o pestañas. Por otra parte, el rasgo multiusuario permite realizar distintas tareas a más de una persona en la misma terminal simultánemente.
 
 Como mencionamos con anterioridad, nos podemos comunicar con el sistema operativo a través de un interlocutor; los comandos. Ahora, comenzaremos a aprender un lenguaje que nos permitirá interactuar y dar instrucciones al sistema para la ejecución de una tarea. Usualmente, los comandos son acrónimos de palabras en inglés y se definen según la función que desempeñan.
 
@@ -41,7 +41,7 @@ Dado que nos cambiamos a Documentos, ahora creémos un subdirectorio llamado Gen
 mkdir Genobiostoic
 ```
 
->**Nota**: En ocasiones, puede suceder que creemos un directorio en un lugar equivocado, o que simplemente queramos deshacernos de un directorio en desuso. El comando para eliminar un directorio dependerá de si este se encuentra o no vacío. Si un directorio **se encuentra vacío**, entonces utilizaremos el comando ``rmdir``, acrónimo de “remove directory”, para eliminarlo. Ahora bien, si el directorio que queremos eliminar **contiene archivos u otros directorios**, debemos utilizar el comando ``rm``, acrónimo de "remove", junto con otra instrucción, ``-r``, que indica al comando rm que la remoción debe ser recursiva para todo el contenido del directorio. Así, para remover directorios que no se encuentren vacíos, utilizaremos ``rm -r``. **¡Cuidado! La remoción de directorios mediante rm -r es riesgosa, pues no tiene vuelta atrás. Asegúrate de utilizar este comando con precaución, procurando que los archivos que eliminarás sean los correctos.** 
+>**Nota**: En ocasiones, puede suceder que creamos un directorio en un lugar equivocado, o que simplemente queramos deshacernos de un directorio en desuso. El comando para eliminar un directorio dependerá de si este se encuentra o no vacío. Si un directorio **se encuentra vacío**, entonces utilizaremos el comando ``rmdir``, acrónimo de “remove directory”, para eliminarlo. Ahora bien, si el directorio que queremos eliminar **contiene archivos u otros directorios**, debemos utilizar el comando ``rm``, acrónimo de "remove", junto con otra instrucción, ``-r``, que indica al comando rm que la remoción debe ser *recursiva* para todo el contenido del directorio. Así, para remover directorios que no se encuentren vacíos, utilizaremos ``rm -r``. **¡Cuidado! La remoción de directorios mediante rm -r es riesgosa, pues no tiene vuelta atrás. Asegúrate de utilizar este comando con precaución, procurando que los archivos que eliminarás sean los correctos.** 
 
 
 Verifiquemos que se haya creado el directorio Genobiostoic a través del comando ``ls`` (list).
@@ -76,7 +76,7 @@ wget https://www.gutenberg.org/cache/epub/43/pg43.txt
 Verifiquemos que se haya descargado el libro con el comando ```ls```.
 
 
-El comando ```mv``` (move) permite cambiar de nombre de un archivo o directorio. Cambiemos el nombre del libro desde pg43.txt a libro1.txt.
+El comando ```mv``` (move) permite cambiar el nombre de un archivo o directorio. Cambiemos el nombre del libro desde pg43.txt a libro.txt.
 
 
 ```
@@ -125,7 +125,7 @@ Ahora peguemos el poema de Federico Garcia Lorca dentro del documento en nano, g
 ls
 ```
 
-En este punto aprenderemos varios comandos que nos permitiran interactuar con estos archivos, como vimos, el programa ```nano``` nos confiere el permiso de editar o modificar el documento, ahora bien, muchas veces queremos ver el documento, es decir, imprimir el contenido en la pantalla sin que sea modificado. Para esto ocupamos el comando ``cat`` (concat):
+En este punto aprenderemos varios comandos que nos permitiran interactuar con estos archivos. Como vimos, el programa ```nano``` nos confiere el permiso de editar o modificar el documento. Ahora bien, muchas veces queremos ver el documento, es decir, imprimir el contenido en la pantalla sin que sea modificado. Para esto ocupamos el comando ``cat`` (concat):
 
 ```
 cat verde.txt
@@ -143,7 +143,7 @@ Como mencionamos, en ocasiones queremos imprimir el encabezado o cierto número 
 head verde.txt
 ```
 
-Varios comandos tienen ciertas funciones, por ejemplo ``head`` acompañado de la función ``-n 40`` imprime en pantalla las primeras 40 lineas del documento:
+Varios comandos tienen ciertas funciones, por ejemplo ``head`` acompañado de la función ``-n`` (number) permite indicar el número de lineas a imprimir en pantalla. Por lo tanto, el comando ``-n 40`` imprime en pantalla las primeras 40 lineas del documento:
 
 ```
 head -n 40 verde.txt
@@ -156,7 +156,7 @@ También, podemos imprimir el final de un documento con el comando ``tail``.
 tail verde.txt
 ```
 
-Al igual que ``head``, ``tail`` acepta la función ``-n`` y podemos imprimir las lineas que deseemos.
+Al igual que ``head``, ``tail`` acepta la función ``-n`` y podemos imprimir el *número* de lineas que deseemos, contando desde el final hacia el principio del documento.
 
 
 Cuando se trabajan con datos Genómicos, muchas veces queremos buscar, ubicar o filtrar ciertos loci, cromosomas, individuos, etc dentro de un archivo, para ello ocupamos el comando ``grep`` (globally search for regular expression and print out). En este ejemplo buscaremos la palabra verde en el texto verde.txt, para ello tipearemos:
@@ -167,14 +167,14 @@ grep verde verde.txt
 
 Aquí, vale la pena resaltar que dimos una instrucción distinta, ordenamos buscar (``grep``) una palabra (verde) en un archivo (verde.txt). De esta forma diseñamos la sintaxis de un programa un poco más complejo que los anteriores.
 
-Ahora vayamos más allá y busquemos (``grep``) un palabra (*Compadre*) y contemos cuántas veces se repite con ``wc`` (word count).
+Ahora vayamos más allá y busquemos (``grep``) un palabra (*Compadre*) y contemos cuántas veces se repite con ``wc`` (word count) y la función ``-l`` que permite contar el número de líneas.
 
 ```
-grep Compadre verde.txt | wc -l
+grep "Compadre" verde.txt | wc -l
 ```
 
 
-En este apartado tendremos la oportunidad de descargar una tabla con ```wget``` y luego filtrar con el comando ```awk``` la primera y segunda columna de la tabla. Esta herramienta en muy útil cuando se trabaja con archivos .xlx y .csv.
+En este apartado tendremos la oportunidad de descargar una tabla con ```wget``` y luego filtrar con el comando ```awk``` la primera y segunda columna de la tabla. Esta herramienta en muy útil cuando se trabaja con archivos .xlsx y .csv.
 
 ```
 wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/010/085/365/GCA_010085365.1_BGI_Echrysoc_fil.V1/GCA_010085365.1_BGI_Echrysoc_fil.V1_assembly_stats.txt
