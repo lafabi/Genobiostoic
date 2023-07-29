@@ -10,11 +10,11 @@ Existen varias formas de ejecutar una tarea o correr un programa en la terminal 
 
 # Scripts en la maquina local
 
-2) Por medio de un código escrito y almacenado en un archivo de texto plano *script*. Éste se define como un programa o código de programación escrito en un lenguaje específico (como R, Bash o Python), que se utiliza para realizar cálculos, análisis o procesamiento, en este caso particular, de datos biológicos. Los scripts son herramientas fundamentales en bioinformática, pues permiten, por ejemplo, automatizar tareas repetitivas a través de la aplicación de algoritmos. Dado que en el tutorial anterior aprendimos líneas de comando básicas en la terminal de Linux, haremos un script sencillo utilizando comandos ya conocidos. Para ello abriremos el editor de texto nano y, una vez abierto, tipearemos la orden de crear un directorio llamado Genobiostoic de la siguiente forma:
+2) Por medio de un código escrito y almacenado en un archivo de texto plano *script*. Éste se define como un programa o código de programación escrito en un lenguaje específico (como R, Bash o Python), que se utiliza para realizar cálculos, análisis o procesamiento, en este caso particular, de datos biológicos. Los scripts son herramientas fundamentales en bioinformática, pues permiten, por ejemplo, automatizar tareas repetitivas a través de la aplicación de algoritmos. Dado que en el tutorial anterior aprendimos líneas de comando básicas en la terminal de Linux, haremos un script sencillo utilizando comandos ya conocidos. Para ello abriremos el editor de texto nano y, una vez abierto, tipearemos la orden de crear un directorio llamado Prueba de la siguiente forma:
     
 ```
 nano
-mkdir Genobiostoic
+mkdir Prueba
 ```
 
 
