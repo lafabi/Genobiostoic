@@ -26,9 +26,9 @@ Inmediatamente el servidor nos solicitará el password.
 
 En ocasiones, la primera vez que nos conectamos a un servidor remoto, éste nos solicita compartir una llave de seguridad para establecer una conexión segura de intercambio de archivos y transferencia de información, de esta forma puede aparecer un diálogo en pantalla y aceptaremos tipeando un *s*
 
-Una vez conectado en el servidor, entraremos al *home* del usuario hospedero, que en este ejemplo es ```fleon```. Al ingresar listaremos el contenido del directorio con ```ls``` y veremos el siguiente contenido: 
+Una vez conectado en el servidor, entraremos al *home* del usuario hospedero, que en este ejemplo es ```studentXX```. Al ingresar listaremos el contenido del directorio con ```ls``` y veremos el siguiente contenido: 
 
-![Z.png](https://github.com/lafabi/Genobiostoic/blob/main/Z.png)
+![Z.png](https://github.com/lafabi/Genobiostoic/blob/main/ejemplo_contenidodir.png)
 
 
 Si utilizamos el comando ```pwd```, veremos que estamos ubicados en la carpeta /home/studentXX. Dado que varios participantes están utilizando el mismo usuario, crearemos un directorio con el nombre de cada uno usando ```mkdir```. Verificamos que cada nombre del usuario escogido por participante se haya creado dentro de /home/studentXX a través del comando ```ls```
