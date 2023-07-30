@@ -617,7 +617,7 @@ Esto también lo podemos realizar con una combinación de ***grep*** y ***wc*** 
 
 ## Concatenar con ***cat***
 
-Bien, la última actividad de este tutorial será unir los resultados que obtuvimos respecto al número total de cds, con los encabezados de nuestras secuencias, de manera que toda la información quede en un único archivo. para usando el comando cat. Para ello utilizamos cat, seguido de los archivos que queremos concatenar y se utiliza > para redirigirlo a un nuevo archivo de texto:
+Bien, la última actividad de este tutorial será unir los resultados que obtuvimos respecto al número total de cds, con los encabezados de nuestras secuencias, de manera que toda la información quede en un único archivo. Para ello utilizamos el comando cat, seguido de los archivos que queremos concatenar y se utiliza > para redirigirlo a un nuevo archivo de texto:
 
     % cat cdstotal.txt datoscds.txt > infocds.txt
 
