@@ -7,18 +7,19 @@ Los archivos SAM obtenidos en el paso previo, son archivos pesados, más aun cua
 #!/bin/bash
 #---------------Script SBATCH - NLHPC ----------------
 #SBATCH -J Samtools-view
-#SBATCH -p general
-#SBATCH -n 5
+#SBATCH -p slims
+#SBATCH --reservation=bioagosto
+#SBATCH -n 1
 #SBATCH -c 1
-#SBATCH --mem-per-cpu=4250
+#SBATCH --mem-per-cpu=2300
 #SBATCH --mail-user=email
 #SBATCH --mail-type=ALL
 #SBATCH -t 2:2:5
 #SBATCH -o Samtools-view_%j.out
 #SBATCH -e Samtools-view_%j.err
 
-SAM=/home/fleon/genomes/
-BAM=/home/fleon/genomes/
+SAM=/home/courses/studentXX/genomes
+BAM=/home/courses/studentXX/genomes
 
 source $HOME/miniconda3/bin/activate
 source activate assembly   
@@ -33,18 +34,19 @@ En el siguiente paso usamos el programa *samtools* de nuevo, esta vez con la fun
 #!/bin/bash
 #---------------Script SBATCH - NLHPC ----------------
 #SBATCH -J Samtools-sort
-#SBATCH -p general
-#SBATCH -n 5
+#SBATCH -p slims
+#SBATCH --reservation=bioagosto
+#SBATCH -n 1
 #SBATCH -c 1
-#SBATCH --mem-per-cpu=4250
+#SBATCH --mem-per-cpu=2300
 #SBATCH --mail-user=email
 #SBATCH --mail-type=ALL
 #SBATCH -t 2:2:5
 #SBATCH -o Samtools-sort_%j.out
 #SBATCH -e Samtools-sort_%j.err
 
-SORTBAM=/home/fleon/genomes/
-BAM=/home/fleon/genomes/
+SORTBAM=/home/courses/studentXX/genomes
+BAM=/home/courses/studentXX/genomes
 
 source $HOME/miniconda3/bin/activate
 source activate assembly   
