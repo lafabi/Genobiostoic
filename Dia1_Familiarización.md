@@ -70,7 +70,7 @@ Ahora que tenemos creado un directorio llamado *Genobiostoic* construyamos esta 
 
 ## Descargar archivos
 
-Ahora que sabemos cómo crear directorios, movernos entre ellos y listar su contenido, aprendamos a descargar archivos desde repositorios remotos a través de líneas de comando. Para ello usaremos ```wget```. En esta oportunidad descargaremos el Libro de literatura inglesa clásica Dr. Jeckyll y Mr.Hyde en el directorio Genobiostoic a través de este comando:
+Ahora que sabemos cómo crear directorios, movernos entre ellos y listar su contenido, aprendamos a descargar archivos desde repositorios remotos a través de líneas de comando. Para ello usaremos ```wget```. En esta oportunidad descargaremos el libro de literatura inglesa clásica Dr. Jeckyll y Mr.Hyde en el directorio Genobiostoic a través de este comando:
 
 
 ```
@@ -189,7 +189,8 @@ Para filtrar la primera columna ocuparemos ```awk``` junto con algunos operadore
 
 
 ```
-awk '{ print $1 }'
+awk '{ print $1 }' GCA_010085365.1_BGI_Echrysoc_fil.V1_assembly_stats.txt
+
 
 ```
 
