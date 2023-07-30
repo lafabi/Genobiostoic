@@ -1,6 +1,6 @@
 ## Obtención de archivos  Binary Alingment Map BAM
 
-Los archivos SAM obtenidos en el paso previo, son archivos pesados, más aun cuando trabajamos con genomas de alta cobertura. En tal sentido, nos conviene transformar éstos archivos SAM en archivos BAM (Binary Alingment Map). Para ello, ocupamos el programa *samtools* función *view*. Veremos que podemos comenzar a aplicar filtros particulares de aquí en adelante, por ejemplo relacionados con la calidad de mapeo contra el genoma de referencia o mantener sólo los reads estén apropiadamentes pareados en el mapeo. 
+Los archivos SAM obtenidos en el paso previo, son archivos pesados, más aun cuando trabajamos con genomas de alta cobertura. En tal sentido, nos conviene transformar éstos archivos SAM en archivos BAM (Binary Alingment Map). Para ello, ocupamos el programa *samtools* función *view*. Veremos que podemos comenzar a aplicar filtros particulares de aquí en adelante, por ejemplo relacionados con la calidad de mapeo contra el genoma de referencia o mantener sólo los reads que estén apropiadamente pareados en el mapeo. 
 
 
 ```
