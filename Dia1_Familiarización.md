@@ -62,7 +62,7 @@ En la terminal, las rutas relativas y absolutas se utilizan para especificar la 
 
 Ahora que tenemos creado un directorio llamado *Genobiostoic* construyamos esta jerarquía de archivos:
 
-![Jerarquía de directorios](https://github.com/lafabi/Genobiostoic/blob/main/Jerarquia_Dir.png)
+![Jerarquía de directorios](https://github.com/lafabi/Genobiostoic/blob/main/Esquema_directorios_dia1.png)
 
 **Figura 1.** Jerarquía de directorios
 
