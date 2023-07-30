@@ -15,7 +15,7 @@ echo Hello World
 
 ## Navegar entre sistemas de archivos
 
-Muchas veces nos resultará útil saber en qué carpeta estamos (desde ahora llamaremos a las carpetas directorios). Para ello utilizamos el comando ``pwd`` (print working directory).
+Muchas veces nos resultará útil saber en qué carpeta estamos (desde ahora llamaremos a las carpetas directorios). Para ello utilizaremos el comando ``pwd`` (print working directory).
 
 ```
  pwd
@@ -66,6 +66,8 @@ Ahora que tenemos creado un directorio llamado *Genobiostoic* construyamos esta 
 
 **Figura 1.** Jerarquía de directorios
 
+>**Nota**: Trabajemos en base a esta figura el concepto de ruta absoluta y relativa. La ruta *relativa* para acceder, por ejemplo, al directorio "Practica1" desde el directorio "Genobiostoic", será /Terminal/Practica1, mientras que la ruta *absoluta* para acceder a este directorio será /home/usuario/Documentos/Genobiostoic/Terminal/Practica1. 
+
 ## Descargar archivos
 
 Ahora que sabemos cómo crear directorios, movernos entre ellos y listar su contenido, aprendamos a descargar archivos desde repositorios remotos a través de líneas de comando. Para ello usaremos ```wget```. En esta oportunidad descargaremos el Libro de literatura inglesa clásica Dr. Jeckyll y Mr.Hyde en el directorio Genobiostoic a través de este comando:
@@ -114,6 +116,8 @@ Lo primero que haremos en esta sección será crear un archivo con un editor de 
 nano
 ```
 
+>**Nota**: Aunque nano es uno de los programas más comúnmente utilizados, existen una serie de otros editores de texto que pueden ser descargados en tu máquina local, tales como *Atom*, *Sublime Text* y *Visual Studio Code*. Te invitamos a probar, aparte de esta inducción, los distintos editores y evaluar cuál te permite trabajar de manera más cómoda. 
+
 A continuación se abre una ventana en la que podemos pegar, tipear y/o editar el texto que deseemos. Presionando ^x salimos del editor de texto nano y regresamos a la terminal. Ahora que sabemos invocar el editor de texto procedamos a crear un documento de texto plano **.txt** llamado *verde*. Para ello copiemos el poema de Federico García Lorca (Disponible al final de esta sección) y seguidamente invoquemos ```nano``` y creémos al mismo tiempo el documento con su nombre y extensión:
 
 ```
@@ -160,7 +164,7 @@ tail verde.txt
 Al igual que ``head``, ``tail`` acepta la función ``-n`` y podemos imprimir el número de lineas que deseemos, contando desde el final hacia el principio del documento.
 
 
-Cuando se trabajan con datos Genómicos, muchas veces queremos buscar, ubicar o filtrar ciertos loci, cromosomas, individuos, etc, dentro de un archivo. Para ello ocupamos el comando ``grep`` (globally search for regular expression and print out). En este ejemplo buscaremos la palabra verde en el texto verde.txt, para ello tipearemos:
+Cuando se trabajan con datos Genómicos, muchas veces queremos buscar, ubicar o filtrar ciertos loci, cromosomas, individuos, etc, dentro de un archivo. Para ello ocupamos el comando ``grep`` (globally search for regular expression and print out). En este ejemplo buscaremos la palabra verde en el texto verde.txt, y para ello tipearemos:
 
 ```
 grep verde verde.txt
@@ -168,14 +172,14 @@ grep verde verde.txt
 
 Aquí, vale la pena resaltar que dimos una instrucción distinta, ordenamos buscar (``grep``) una palabra (verde) en un archivo (verde.txt). De esta forma diseñamos la sintaxis de un programa un poco más complejo que los anteriores.
 
-Ahora vayamos más allá y busquemos (``grep``) un palabra (*Compadre*) y contemos cuántas veces se repite con ``wc`` (word count) y la función ``-l`` que permite contar el número de líneas.
+Ahora vayamos más allá y busquemos (``grep``) un palabra (*Compadre*) y contemos cuántas veces se repite con ``wc`` (word count) y la función ``-l``, que permite contar el número de líneas.
 
 ```
 grep "Compadre" verde.txt | wc -l
 ```
 
 
-En este apartado tendremos la oportunidad de descargar una tabla con ```wget``` y luego filtrar con el comando ```awk``` la primera y segunda columna de la tabla. Esta herramienta en muy útil cuando se trabaja con archivos .xlsx y .csv.
+Para continuar profundizando el uso de comandos, descarguemos una tabla con ```wget``` y luego filtremos con el comando ```awk``` la primera y segunda columna de la tabla. Esta herramienta en muy útil cuando se trabaja con archivos .xlsx y .csv.
 
 ```
 wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/010/085/365/GCA_010085365.1_BGI_Echrysoc_fil.V1/GCA_010085365.1_BGI_Echrysoc_fil.V1_assembly_stats.txt
