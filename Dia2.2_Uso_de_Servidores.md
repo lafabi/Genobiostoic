@@ -26,7 +26,7 @@ Inmediatamente el servidor nos solicitará el password.
 
 En ocasiones, la primera vez que nos conectamos a un servidor remoto, éste nos solicita compartir una llave de seguridad para establecer una conexión segura de intercambio de archivos y transferencia de información, de esta forma puede aparecer un diálogo en pantalla y aceptaremos tipeando un *s*
 
-Una vez conectado en el servidor, entraremos al *home* del usuario hospedero, que en este ejemplo es ```studentXX```. Al ingresar listaremos el contenido del directorio con ```ls``` y veremos el siguiente contenido: 
+Una vez conectado en el servidor, entraremos al *home* del usuario hospedero, que en este ejemplo es ```student98```. Al ingresar listaremos el contenido del directorio con ```ls``` y veremos el siguiente contenido: 
 
 ![Z.png](https://github.com/lafabi/Genobiostoic/blob/main/ejemplo_contenidodir.png)
 
