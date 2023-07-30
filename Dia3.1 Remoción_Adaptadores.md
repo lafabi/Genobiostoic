@@ -47,7 +47,7 @@ Los archivos de salida de esta corrida tendrán 4 tipos de extensiones *.1U.fq, 
 
 ## Indexación del Genoma de Referencia para alineamiento
 
-Una vez finalizado el proceso de remoción de adaptadores, tendremos listos nuestros archivos de salida para iniciar el segundo paso: alineamiento contra el genoma de referencia escogido para los zorros, que en este caso corresponde al genoma del Perro, o *Canis lupus familiaris*. Para ello, ya hemos descargado el genoma de referencia ```GCF_000002285.5_Dog10K_Boxer_Tasha_genomic.fna``` en el directorio ```/home/fleon/genomes/Index```. Este genoma de referencia fue indexado a través del programa ```BWA-MEM``` y se generaron los archivos con las siguientes extensiones :  dog_index.amb  dog_index.ann  dog_index.bwt  dog_index.pac  dog_index.sa. 
+Una vez finalizado el proceso de remoción de adaptadores, tendremos listos nuestros archivos de salida para iniciar el segundo paso: alineamiento contra el genoma de referencia escogido para los zorros, que en este caso corresponde al genoma del Perro, o *Canis lupus familiaris*. Para ello, ya hemos descargado el genoma de referencia ```GCF_000002285.5_Dog10K_Boxer_Tasha_genomic.fna``` en el directorio ```/home/studentXX/genomes/Index```. Este genoma de referencia fue indexado a través del programa ```BWA-MEM``` y se generaron los archivos con las siguientes extensiones :  dog_index.amb  dog_index.ann  dog_index.bwt  dog_index.pac  dog_index.sa. 
 
 
 > Para abarcar los objetivos de este taller, y cumplir con los tiempos decidimos tener generados estos archivos previamente.
