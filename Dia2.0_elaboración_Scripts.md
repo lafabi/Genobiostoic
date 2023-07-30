@@ -28,21 +28,22 @@ Observaremos, al listar de nuevo el contenido del directorio, que el nombre "scr
 
 Una vez realizado esto, podremos correr este script1 de varias formas:
 
-2.1) Directo en la terminal; al igual que el apartado anterior, esta forma inutilizará la ventana hasta que se complete el proceso. Si se considera que se ejecutarán programas complejos se tardará aun más la operatividad de la ventana. De igual forma que el apartado anterior, se puede ocupar el ampersand "&" para correrlo en segundo plano. Para correr este script1.sh tipeamos en la terminal:
+2.1) Directo en la terminal; al igual que el apartado anterior, esta forma inutilizará la ventana hasta que se complete el proceso. Si se considera que se ejecutarán programas complejos se tardará aun más la operatividad de la ventana. De igual forma que el apartado anterior, se puede ocupar el ampersand "&" para correrlo en segundo plano, lo cual libera el uso de la terminal, pero el proceso sigue siendo dependiente de la terminal.
+Para correr el script *script1.sh* tipeamos en la terminal:
 ```
 bash script1.sh
 ```
-o
+o para liberar el uso de la terminal
 ```
-bash script1.sh&
-```
-
-2.2) Enviarlo al frontend (que es la interfaz con la que interactuamos en el sistema operativo) a través de un comando "nohup" y redireccionar los archivos de reporte de salida de la siguiente forma:
-```
-nohup ./script1.sh > script.out
+bash script1.sh &
 ```
 
-Es muy conveniente correr los scripts con tareas complejas a través de esta forma, dado que si se produjera un error en el procesamiento del análisis saldría reportado en el archivo script.out, que crea automáticamente esta alternativa. De hecho, durante el tiempo de la corrida se puede verificar el progreso en tiempo real del avance del programa. Para esto sólo debemos correr el siguiente comando para imprimir el contenido del archivo:
+2.2) Enviarlo al frontend (que es la interfaz con la que interactuamos en el sistema operativo) a través del comando ***nohup*** (del inglés *no hang up*) y redireccionar los archivos de reporte de salida de la siguiente forma:
+```
+nohup ./script1.sh > script1.out
+```
+
+Es muy conveniente correr los scripts con tareas complejas a través de esta forma, dado que si se produjera un error en el procesamiento del análisis saldría reportado en el archivo script.out. De hecho, durante el tiempo de la corrida se puede verificar el progreso en tiempo real del avance del programa. Para esto sólo debemos correr el siguiente comando para imprimir el contenido del archivo:
 ```
 cat script.out
 ```
