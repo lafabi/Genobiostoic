@@ -3,7 +3,7 @@
 Para verificar la calidad de los genomas, primero hay que recibirlos de la plataforma de secuenciación y luego subirlos a los servidores de alta capacidad. Existen varias formas de transferir los archivos al servidor, que se mencionarán a continuación. Supongamos que tenemos los siguientes genomas de zorros, m2267sub2_R1.fastq.gz, m2267sub2_R2.fastq.gz, m2293sub2_R1.fastq.gz y m2293sub2_R2.fastq.gz contenidos un directorio de nuestra máquina local, y los queremos subir al servidor remoto del NLHPC con destino al directorio /home/fleon/genomes. Para realizar esta tarea, ocuparemos el comando ```rsync``` junto con otros operadores de la siguiente forma:
 
 ```
-rsync -azvrP -e Zorros/ ssh fleon@leftraru.nlhpc.cl:/home/fleon/ 
+rsync -azvrP -e Zorros/ ssh studentXX@leftraru.nlhpc.cl:/home/studentXX/ 
 
 ```
 
@@ -19,18 +19,19 @@ Los genomas estarán depositados en el siguiente directorio ```/home/fleon/genom
 #!/bin/bash
 #---------------Script SBATCH - NLHPC ----------------
 #SBATCH -J FastQC-tunombre
-#SBATCH -p general
+#SBATCH -p slims
+#SBATCH --reservation=bioagosto
 #SBATCH -n 1
 #SBATCH -c 1
-#SBATCH --mem-per-cpu=1500
+#SBATCH --mem-per-cpu=2300
 #SBATCH --mail-user=email
 #SBATCH --mail-type=ALL
 #SBATCH -t 2:2:5
 #SBATCH -o FastQC_%j.out
 #SBATCH -e FastQC_%j.err
 
-GEN=/home/fleon/genomes/
-QC=/home/fleon/usuarios/tunombre/QC
+GEN=/home/courses/studentXX/genomes
+QC=/home/courses/studentXX/QC
 
 source $HOME/miniconda3/bin/activate
 conda activate assembly
