@@ -67,7 +67,7 @@ Una vez finalizado el proceso de remoción de adaptadores, tendremos listos nues
 source /home/miniconda3/bin/activate
 source activate assembly
 
-REF=/home/fleon/genomes/Index
+REF=/home/courses/studentXX/Index
 
 bwa index -p $REF/dog_index $REF/GCF_000002285.5_Dog10K_Boxer_Tasha_genomic.fna
 
