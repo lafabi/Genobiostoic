@@ -31,6 +31,8 @@ trimmomatic PE -threads 5 -phred33 $GEN/m2267sub2_R1.fastq.gz $GEN/m2267sub2_R2.
 
 ```
 
+>**Nota**: Tal como se hizo en este script, recomendamos siempre que los nombres de los archivos generados tengan relación con el proceso que se ejecutó. Nótese que, en este ejemplo, a los archivos *output* indicados mediante *-baseout $TRIM/m2267.trim.fq*, se les agregó el nombre .trim antes de la extensión .fq.
+
 Una vez diseñado el script abrimos ``` nano ``` y escogemos un nombre alusivo a la función de este script, tal como *trimming.sh*. Seguidamente podemos enviarlo a correr al backend a través del siguiente comando: 
 
 ```
