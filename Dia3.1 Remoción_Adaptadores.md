@@ -7,11 +7,12 @@ En esta etapa del taller comenzaremos a editar y generar varios archivos de impo
 ```
 #!/bin/bash
 #---------------Script SBATCH - NLHPC ----------------
-#SBATCH -J Trimmomatic
-#SBATCH -p general
-#SBATCH -n 5
+#SBATCH -J Trimmomatic-ID
+#SBATCH -p slims
+#SBATCH --reservation=bioagosto
+#SBATCH -n 1
 #SBATCH -c 1
-#SBATCH --mem-per-cpu=4250
+#SBATCH --mem-per-cpu=2300
 #SBATCH --mail-user=email
 #SBATCH --mail-type=ALL
 #SBATCH -t 2:2:5
@@ -19,9 +20,9 @@ En esta etapa del taller comenzaremos a editar y generar varios archivos de impo
 #SBATCH -e Trimmomatic_%j.err
 
 
-GEN=/home/fleon/genomes/
-TRIM=/home/fleon/genomes/
-ADAPT=/home/fleon/Adapt
+GEN=/home/courses/studentXX/genomes
+TRIM=/home/courses/studentXX/genomes
+ADAPT=/home/courses/Adapt
 
 source $HOME/miniconda3/bin/activate
 source activate assembly   
@@ -52,15 +53,18 @@ Una vez finalizado el proceso de remoción de adaptadores, tendremos listos nues
  
 ```
 #!/bin/bash
-#SBATCH -J Canis-index
-#SBATCH -p general
-#SBATCH -n 5
-#SBATCH --mem-per-cpu=3000
-#SBATCH -t 10:00:00
+#---------------Script SBATCH - NLHPC ----------------
+#SBATCH -J BWA-ID
+#SBATCH -p slims
+#SBATCH --reservation=bioagosto
+#SBATCH -n 1
+#SBATCH -c 1
+#SBATCH --mem-per-cpu=2300
+#SBATCH -t 2:00:00
 #SBATCH -o  Canis-index%j_%x.out
 #SBATCH -e  Canis-index%j_%x.err
 
-source /home/fleon/miniconda3/bin/activate
+source /home/miniconda3/bin/activate
 source activate assembly
 
 REF=/home/fleon/genomes/Index
@@ -77,25 +81,25 @@ El script lo puede guardar con el nombre alusivo a la función de su contenido.
 ```
 #!/bin/bash
 #---------------Script SBATCH - NLHPC ----------------
-#SBATCH -J BWA
-#SBATCH -p general
-#SBATCH -n 5
+#SBATCH -J BWA-ID
+#SBATCH -p slims
+#SBATCH --reservation=bioagosto
+#SBATCH -n 1
 #SBATCH -c 1
-#SBATCH --mem-per-cpu=4250
+#SBATCH --mem-per-cpu=2300
 #SBATCH --mail-user=email
 #SBATCH --mail-type=ALL
-#SBATCH -t 2:2:5
+#SBATCH -t 2:00:00
 #SBATCH -o BWA_%j.out
 #SBATCH -e BWA_%j.err
 
-REF=/home/fleon/genomes/Index
-TRIM=/home/fleon/genomes/
-OUT=/home/fleon/genomes/
+REF=/home/courses/studentXX/Index
+OUT=/home/courses/studentXX/genomes
 
 source $HOME/miniconda3/bin/activate
 source activate assembly   
 
-bwa mem -t 5 -M -R '@RG\tID:m2267\tLB:m2267\tPL:ILLUMINA\tPU:A00354\tSM:m2267' $REF/dog_index $TRIM/m2267.trim_1P.fq $TRIM/m2267.trim_2P.fq > $OUT/m2267.sam 
+bwa mem -t 1 -M -R '@RG\tID:m2267\tLB:m2267\tPL:ILLUMINA\tPU:A00354\tSM:m2267' $REF/dog_index $TRIM/m2267.trim_1P.fq $TRIM/m2267.trim_2P.fq > $OUT/m2267.sam 
 
 ```
 
