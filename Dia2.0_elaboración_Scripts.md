@@ -20,11 +20,11 @@ mkdir Prueba
 
 Seguidamente guardaremos el documento de texto plano con el nombre de "script1.sh" y haremos el script ejecutable, es decir, que el sistema lo reconozca como un programa, a través del siguiente comando:
 ```
-$chmod +x script1.sh
+chmod +x script1.sh
 ```
 Observaremos, al listar de nuevo el contenido del directorio, que el nombre "script1.sh" ha cambiado de color, indicativo de que el documento que acabamos de crear ahora puede ser ejecutado como un programa con una instrucción específica de realizar una tarea.
 
->**Nota**: Siempre es recomendable asignar al script un nombre relacionado con su función, con el propósito de evitar confusiones.
+>**Nota**: Siempre es recomendable asignar al script un nombre relacionado con su función, con el propósito de evitar confusiones, y designar una extensión según el lenguaje de programación utilizado (por ejemplo: bash = .sh, python = py, R = .R)
 
 Una vez realizado esto, podremos correr este script1 de varias formas:
 
