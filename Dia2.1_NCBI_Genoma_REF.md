@@ -62,18 +62,18 @@ Construye una tabla comparativa entre los atributos de cada uno de los posibles 
 ![Pregunta-proyecto](https://github.com/lafabi/Genobiostoic/blob/main/Pregunta-proyecto.png)
 
 
-### Descarguemos el genoma de referencia de la perrita boxer **Tasha** desde el servidor remoto del NCBI a nuestra máquina remota en el directorio Genobiostoic/NCBI/Genomas, este genoma de referencia es el que ocuparemos para ensamblar nuestros genomas de especie no modelo. Usaremos el siguiente comando: 
+### Descarguemos el genoma de referencia de la perrita boxer **Tasha** desde el servidor remoto del NCBI a nuestra máquina remota en el directorio Genobiostoic/NCBI/Genomas. Este genoma de referencia es el que ocuparemos para ensamblar nuestros genomas de especie no modelo. Usaremos el siguiente comando: 
 
 ```
 wget --recursive -e robots=off --reject "index.html" --no-host-directories --cut-dirs=6 https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/002/285/GCF_000002285.5_Dog10K_Boxer_Tasha/GCF_000002285.5_Dog10K_Boxer_Tasha_genomic.fna.gz
 ```
-Esta acción puede tardar un poco, según el tamaño del genoma.Una vez descargado el 100% de este genoma, podemos descomprimirlo con el comando ```gzip -d```
+Esta acción puede tardar un poco, según el tamaño del genoma. Una vez descargado el 100% de este genoma, podemos descomprimirlo con el comando ```gzip -d```
 
 ```
 gzip -d GCF_000002285.5_Dog10K_Boxer_Tasha_genomic.fna.gz
 
 ```
-Verificamos que se ha descomprimido pues se elimina la extensión *.gz* y su nombre cambia automáticamente de color. Luego podemos comprimirlo otra vez con el comando```gzip```
+Verificamos que se ha descomprimido pues se elimina la extensión *.gz* y su nombre cambia automáticamente de color. Luego podemos, de ser necesario, comprimirlo otra vez con el comando```gzip```
 
 ```
 gzip GCF_000002285.5_Dog10K_Boxer_Tasha_genomic.fna
