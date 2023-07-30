@@ -389,7 +389,7 @@ Y el caballo en la montaña.
 
 ------------------------------------------------------------------------------
 
-La finalidad de este tutorial es poner en practica los comandos aprendidos en la primera sección explorando datos genómicos. Además aprenderemos otras herramientas.
+La finalidad de este tutorial es poner en práctica los comandos aprendidos en la primera sección explorando datos genómicos. Además aprenderemos otras herramientas.
 La idea general es mostrar las posibilidades que existen cuando uno trabaja con la terminal, haciendo un barrido de los comandos. Ello para que sea una base sobre la cual, en el futuro, podamos utilizarlos incorporando argumentos y mirando sus opciones en el manual.
 
 En particular, exploraremos como utilizar los siguientes comandos y herramientas:
