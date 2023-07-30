@@ -23,16 +23,17 @@ Si trabajas con conservación biológica, también te puede interesar los siguie
 
 > + https://www.dnazoo.org/
 > + https://vertebrategenomesproject.org/
+> + https://goat.genomehubs.org
 
 
 ### Consideraciones para escoger Genoma de referencia
 
 Dependiendo de la pregunta de tu proyecto existirán ciertos atributos de los genoma de referencia disponibles que deberás revisar y escoger, Entre ellos:  
 
+> + Relación Filogenética con tu modelo de estudio: Qué tan emparentados estan con nuestro modelo de estudio
 > + Nivel de ensamblaje: Scaffolds vs Cromosomas
 > + Cariotipaje según tu modelo de estudio: Número de Cromosomas parecido al modelo?
 > + Calidad de Cobertura: Cobertura de Secuenciación
-> + Relación Filogenética con tu modelo de estudio: Qué tan emparentados estan con nuestro modelo de estudio
 > + Representación del formato del Genoma en el Repositorio: Formato GenBank vs RefSeq
 > + Consideraciones sobre la Tecnología de secuenciación: Ilumina, PacBio, etc.
 
@@ -49,10 +50,10 @@ Spheniscus humboldti
 Rhinoderma darwinii
 ```
 ```
-Lycalopex fulvipex
+Lycalopex fulvipes
 ```
 
-Con base en estas consideraciones,hagamos un ejercicio práctico para buscar genomas de Referencia 
+Con base en estas consideraciones, hagamos un ejercicio práctico para buscar genomas de Referencia 
 
 
 Construye una tabla comparativa entre los atributos de cada uno de los posibles genomas de referencia encontrados en el NCBI. En caso que no existan genoma de referencias de los modelos propuestos, cuáles otros pudieras escoger y por qué?. A continuación mostraremos un diagrama con base en la toma de decisiones que debiéramos tomar en consideración a la hora de escoger el genoma de referencia. Ten en consideración que la escogencia dependerá de tu pregunta de investigación.
@@ -72,10 +73,10 @@ Esta acción puede tardar un poco, según el tamaño del genoma.Una vez descarga
 gzip -d GCF_000002285.5_Dog10K_Boxer_Tasha_genomic.fna.gz
 
 ```
-Verificamos que se ha descomprimido pues se elimina la extensión *.gz* y su nombre cambia automáticamente de color. Luego podemos comprimirlo otra vez con el comando```gzip -9```
+Verificamos que se ha descomprimido pues se elimina la extensión *.gz* y su nombre cambia automáticamente de color. Luego podemos comprimirlo otra vez con el comando```gzip```
 
 ```
-gzip -9 GCF_000002285.5_Dog10K_Boxer_Tasha_genomic.fna
+gzip GCF_000002285.5_Dog10K_Boxer_Tasha_genomic.fna
 
 ```
 
