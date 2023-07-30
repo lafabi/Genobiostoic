@@ -6,10 +6,10 @@ En este tutorial nos enfocaremos en realizar el ejercicio de reconstrucción de 
  
 ## Dónde encuentro los genomas de Referencia: Repositorios de Genomas.
 
-El Centro Nacional de Información Biotecnológica [NCBI](https://www.ncbi.nlm.nih.gov/) es una parte de la Biblioteca Nacional de Medicina de los Estados Unidos, la cual forma parte del Instituto Nacional de la Salud (NIH). El NCBI es un recurso integral de información en biología molecular y  desempeña un papel vital en el avance de la investigación en diversos campos de la biología, entre ellos la Genómica.
-El NCBI brinda acceso a diversas bases de datos y herramientas que son ampliamente utilizadas por científicos, investigadores y profesionales de la salud. Algunos de los recursos más conocidos ofrecidos por el NCBI incluyen:
+El Centro Nacional de Información Biotecnológica [NCBI](https://www.ncbi.nlm.nih.gov/) es una parte de la Biblioteca Nacional de Medicina de los Estados Unidos, la cual forma parte del Instituto Nacional de la Salud (NIH). El NCBI es un recurso integral de información en biología molecular y desempeña un papel vital en el avance de la investigación en diversos campos de la biología, entre ellos la Genómica.
+NCBI brinda acceso a diversas bases de datos y herramientas que son ampliamente utilizadas por científicos, investigadores y profesionales de la salud. Algunos de los recursos más conocidos ofrecidos por el NCBI incluyen:
 
-[NCBI Assembly](https://www.ncbi.nlm.nih.gov/assembly):  Este repositorio recopila, almacena y organiza **secuencias genómicas en genomas completos** o parciales dentro de las bases de datos de la plataforma del NCBI. Podemos encontrar secuenciaciones genómicas en bruto a nivel de contigs, scaffolds y cromosomas. Esta herramienta es la que utizaremos a continuación para descargar y analizar y escoger los genomas de referencias.
+[NCBI Assembly](https://www.ncbi.nlm.nih.gov/assembly):  Este repositorio recopila, almacena y organiza **secuencias genómicas en genomas completos** o parciales dentro de las bases de datos de la plataforma del NCBI. Podemos encontrar secuenciaciones genómicas en bruto a nivel de contigs, scaffolds y cromosomas. Esta herramienta es la que utizaremos a continuación para analizar, escoger y descargar los genomas de referencias.
 
 Mencionamos además estas herramientas que ofrece el NCBI de relevante importancia:
 
