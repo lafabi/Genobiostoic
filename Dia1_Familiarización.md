@@ -64,7 +64,7 @@ Ahora que tenemos creado un directorio llamado *Genobiostoic* construyamos esta 
 
 ![Jerarquía de directorios](https://github.com/lafabi/Genobiostoic/blob/main/Jerarquia_Dir.png)
 
-**Figura 1.-** Jerarquía de directorios
+**Figura 1.** Jerarquía de directorios
 
 ## Descargar archivos
 
@@ -428,7 +428,7 @@ Si no nos encontramos en escritorio movámonos con ***cd*** hasta llegar a ese d
 
 ## Crear directorios con ***mkdir***
 
-Crearemos una nueva carpeta en escritorio que se denomine *Tutorial*. Dentro de ella crearemos un directorio *data*. Para esto ocuparemos el comando *mkdir* y *cd* para situarnos en la carpeta data, que será la ubicación  donde guardaremos los genómicos como se muestra en la **Figura 2**.
+Crearemos una nueva carpeta en escritorio que se denomine *Tutorial*. Dentro de ella crearemos un directorio *data*. Para esto ocuparemos el comando *mkdir* y *cd* para situarnos en la carpeta data, que será la ubicación donde guardaremos los datos genómicos como se muestra en la **Figura 2**.
 Para ocupar este comando simplemente debemos tipear *mkdir* seguido del nombre de la carpeta que deseamos crear.
 
 >**Nota**: No incluir nunca espacios en blanco en los nombres de archivos y directorios, generan problemas para moverse en la terminal.
@@ -436,7 +436,7 @@ Para ocupar este comando simplemente debemos tipear *mkdir* seguido del nombre d
 
 ![mkdir](Shell3.png)
 
-**Figura 2.-** Crear directorios utilizando *mkdir*
+**Figura 2.** Crear directorios utilizando *mkdir*
 
 >**Nota**: En los siguientes recuadros se muestran los comandos de este tutorial seguido del prompt (símbolo %). Los escritos iniciados por el símbolo hash (#) son comentarios que no se ejecutan.
 
@@ -459,21 +459,21 @@ Un ejemplo para la Figura 2, sería el siguiente:
 
     # Imprimamos la ruta absoluta del directorio
 
-    % pwd
-    /Users/mariajose/Desktop/Tutorial/data
+    % pwd   # /Users/mariajose/Desktop/Tutorial/data
 
 
 ## Conocer más sobre las funciones de los comandos usando ***man***
 
 Desde esa ubicación (~/Desktop/Tutorial/data), bajaremos los datos utilizando el comando ***curl***. Pero antes demos una mirada al manual de curl utilizando el comando ***man***.
-El comando ***man*** nos permite acceder al manual de los comando ejecutados en la terminal. En ello encontraremos una descripción general de su uso y los argumentos u opciones los acompañan y confieren atributos especiales a cada uno de ellos.
+El comando ***man*** nos permite acceder al manual de los comando ejecutados en la terminal. En ello encontraremos una descripción general de su uso y los argumentos u opciones que los acompañan y confieren atributos especiales a cada uno de los comandos.
 
     % man curl
 
-Con ello se despliega la información de la herramienta y como utilizarla (**Figura 4**). En este caso se puede ver que ***curl*** nos permite transferir datos desde o hacia un servidor.
+Con ello se despliega la información de la herramienta y como utilizarla (**Figura 3**). En este caso se puede ver que ***curl*** nos permite transferir datos desde o hacia un servidor.
 
 ![man curl](curlman.png)
-**Figura 4** Página manual de ***curl***
+
+**Figura 3.** Página manual de ***curl***
 
 para salir del manual simplemente tipearemos
 
@@ -500,6 +500,8 @@ En el cuadro de diálogo se indican los archivos descomprimidos con la ruta rela
 
 ![unzip](unzip.png)
 
+**Figura 4.** Descomprimir archivos utilizando el comando unzip
+
 ## Eliminar archivos con ***rm***
 
 Vemos que los archivos quedaron almacenado en el directorio *~/Desktop/Tutorial/data/ncbi_dataset/data/GCF_000699145.1*.
@@ -510,7 +512,7 @@ Ahora que descomprimimos nuestro archivo, podemos eliminarlo y así liberar espa
 
 ## Renombrar y/o mover archivos y carpetas con ***mv***
 
-Como se mencionó previamente, al descomprimir nuestros datos, quedaron almacenados en la carpeta GCF_000699145.1*, dentro de dos otros directorios. Podría ser de nuestro interés cambiar el nombre del directorio y moverlo a nuestro directorio de trabajo. Cambiemos el nombre y movámoslo 2 directorios hacia atrás, para que quede en nuestro *working directory*. Para ello ocuparemos un único comando, *mv*, que nos permite mover o bien re-nombrar directorios o archivos. Para ello indicamos *mv* + nombre actual + nuevo nombre (o ruta):
+Como se mencionó previamente, al descomprimir nuestros datos, quedaron almacenados en la carpeta GCF_000699145.1, dentro de dos otros directorios. Podría ser de nuestro interés cambiar el nombre del directorio y moverlo a nuestro directorio de trabajo. Cambiemos el nombre y movámoslo 2 directorios hacia atrás, para que quede en nuestro *working directory*. Para ello ocuparemos un único comando, *mv*, que nos permite mover o bien re-nombrar directorios o archivos. Para ello indicamos *mv* + nombre actual + nuevo nombre (o ruta):
 
     # Naveguemos al directorio data y modifiquemos el nombre del directorio a emperadordata:
 
@@ -519,7 +521,7 @@ Como se mencionó previamente, al descomprimir nuestros datos, quedaron almacena
 
     # Ahora movamos la carpeta a nuestro directorio data (dos directorios atrás).
 
-    % mv emperadordata ../..
+    % mv emperadordata ../../
 
 Listo! ahora tenemos nuestros datos de pingüino Emperador en la carpeta data. Liberemos más espacio removiendo el directorio ncbi_dataset. para ello utilizaremos el comando ***rm***, pero con el argumento *-r*, que nos permitirá eliminar un directorio:
 
@@ -564,6 +566,8 @@ En nuestro archivo vemos que tenemos una serie de secuencias precedidas por info
 
 ![head](head.png)
 
+**Figura 5.** Primeras 10 lineas del archivo de regiones codificantes
+
 Para extraer sólo esa información y dejar de lado las secuencias, podemos utilizar el comando ***grep***. ***grep*** es una herramienta que nos permite buscar palabras o caracteres determinados en un archivo y los imprime en la pantalla.
 
     % grep ">" cds_from_genomic.fna
@@ -585,6 +589,8 @@ Daremos un vistazo a ese nuevo archivo utilizando ***nano***. ***Nano*** es un e
 
 ![nano](nano.png)
 
+**Figura 6.** Procesamiento de texto con comando nano
+
 En la parte inferior de la ventana, se indican las opciones de **nano**, a las cuales se accede con control+ la opción que elijamos. Por ejemplo, si queremos guardar los cambios en nuestro archivo, pulsamos control+O. En ese momento nano preguntará el nombre del archivo donde queremos guardar los datos. Este se puede modifical o mantener. Si pulsamos *enter* se guardarán los cambios en nuestro mismo archivo inicial. Ahora podemos salir de nano pulsando control+x.
 
 
@@ -597,7 +603,7 @@ Bien, volvamos a nuestros datos genómicos. Con los comandos que hemos aprendido
 
 Esto también lo podemos realizar con una combinación de ***grep*** y ***wc*** sin embargo para ello, tenemos que re-dirigir el resultado de un comando para que se transforme en input del siguiente comando, lo que se puede lograr usando el ***pipe***. ***pipe*** hace referencia al símbolo | el cual separa las operaciones que vamos a unir mediante los distintos comandos para tener un único resultado. Por ejemplo
 
-    # Primero se indica con grep la búsqueda de todas las líneas que presenten el simbolo ">". Luego con | que, indicamos que a partir de ese resultado (que no se imprime en la pantalla), el comando wc con el algumento -l, imprima el número total de líneas encontradas por grep. Este comando entregará el mismo resultado obtenido anteriormente con grep -c.
+    # Primero se indica con grep la búsqueda de todas las líneas que presenten el simbolo ">". Luego con | indicamos que a partir de ese resultado (que no se imprime en la pantalla), el comando wc con el algumento -l, imprima el número total de líneas encontradas por grep. Este comando entregará el mismo resultado obtenido anteriormente con grep -c.
 
     % grep ">" cds_from_genomic.fna | wc -l
 
