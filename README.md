@@ -1,5 +1,5 @@
 # Genobiostoic
-Taller para estudiantes de pregrado, postgrado, postdoctorados o académicos en general, cuyo objetivo principal o secundario involucre estudios genómicos. Se realizará entre el 31 de Julio y el 03 de Agosto en el laboratorio CEC D de 8:30 a 12:30 🕧. 
+Taller para estudiantes de pregrado, postgrado, postdoctorados o académicos en general, cuyo objetivo principal o secundario involucre estudios genómicos. Se realizará entre el 31 de Julio y el 03 de Agosto en el laboratorio CEC D de 8:30 a 1:30 🕧. 
 
 Este workshop está orientado para estudiantes que no poseen experiencia en el área de genómica ni bioinformática, así otorgará las herramientas básicas y necesarias para iniciar las tareas fundamentales, orientado especialmente para la reconstrucción de genomas a partir de genomas de referencia. Estará estructurado de la siguiente forma:
 
