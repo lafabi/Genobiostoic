@@ -1,85 +1,44 @@
-# Verificación de calidad de reads en el servidor NLHPC
+![image](https://github.com/lafabi/Genobiostoic/assets/60276632/40d76290-f711-48df-ba71-7dceae833532)![image](https://github.com/lafabi/Genobiostoic/assets/60276632/71673b42-c0b2-4dfb-aead-96ad8654be52)# Verificación de calidad de reads en el servidor NLHPC
 
-Para verificar la calidad de los genomas, primero hay que recibirlos de la plataforma de secuenciación y luego subirlos a los servidores de alta capacidad. Existen varias formas de transferir los archivos al servidor, que se mencionarán a continuación. Supongamos que tenemos los siguientes genomas de zorros, m2267sub2_R1.fastq.gz, m2267sub2_R2.fastq.gz, m2293sub2_R1.fastq.gz y m2293sub2_R2.fastq.gz contenidos un directorio de nuestra máquina local, y los queremos subir al servidor remoto del NLHPC con destino al directorio /home/fleon/genomes. Para realizar esta tarea, ocuparemos el comando ```rsync``` junto con otros operadores de la siguiente forma:
-
-```
-rsync -azvrP -e Zorros/ ssh studentXX@leftraru.nlhpc.cl:/home/studentXX/ 
+Para verificar la calidad de los genomas, primero hay que recibirlos de la plataforma de secuenciación y luego subirlos a los servidores de alta capacidad. Existen varias formas de transferir los archivos al servidor, que se mencionarán a continuación. Supongamos que tenemos los siguientes genomas de zorros, m2267sub2_R1.fastq.gz, m2267sub2_R2.fastq.gz, m2293sub2_R1.fastq.gz y m2293sub2_R2.fastq.gz contenidos el directorio "genomes" de nuestra máquina local, y los queremos subir al servidor remoto del NLHPC con destino al directorio /home/courses/sutdentXX/genomes. Para realizar esta tarea, ocuparemos el comando ```rsync``` junto con otros operadores de la siguiente forma:
 
 ```
+rsync -azvrP -e /home/User/genomes ssh studentXX@leftraru.nlhpc.cl:/home/courses/studentXX/ 
 
->**Nota**: El comando, bajo el formato en el que está descrito, debe ejecutarse desde la carpeta Zorros, contenida en la máquina local. A grandes rasgos, el comando está indicando que se transifera todo lo contenido en la carpeta Zorros hacia la carpeta fleon, presente en el servidor remoto.
+```
+
+>**Nota**: El comando, bajo el formato en el que está descrito, debe ejecutarse desde el directorio /home/User/, contenida en la máquina local. A grandes rasgos, el comando está indicando que se transifera el directorio "genomes" hacia el directorio studentXX/, presente en el servidor remoto.
 
 Al trabajar con datos genómicos, muchas veces grandes en peso y también numerosos, conviene estar atentos a que las transferencias se hagan de forma correcta, es decir que los archivos no estén *truncados*. Para ello, el comando ```rsync``` no solamente nos permite transferir archivos, sino que además nos verifica la imagen de integridad de la transferencia. De esta forma, si se llegara a interrumpir la conexión de transferencia, se recupera la información ya transferida al ejecutar el mismo comando otra vez, continuando la transferencia de datos desde el punto donde se interrumpió.
 
-Ya una vez transferidos los genomas de Zorros al servidor (esto ya lo hemos hecho para ahorar tiempo), pasaremos al primer "análsis", que es comprobar la calidad de los genomas. Para ello ocuparemos el programa ```FastQC```, que para efectos de este taller ya está instalado en el servidor a través del gestor de paquetes llamado ```conda```.
+Ya una vez transferidos los genomas de Zorros al servidor (esto ya lo hemos hecho para ahorar tiempo), pasaremos al primer "análsis", que es comprobar la calidad de los genomas. Para ello vamos a ejecutar el comando de FastQC de diferentes formas, luego MultiQC, y por último transferiremos los resultados a nuestra máquina local para verlos en el navegador.
 
-Los genomas estarán depositados en el siguiente directorio ```/home/courses/studentXX/genomes/``. Crearemos un directorio dentro del directorio genomes/, quedando así  /home/courses/studentXX/genomes/QC_estudianteX/. Con esto, ya estamos listos para construir nuestro primer Script y enviarlo a través del *scheduler* SLURM al backend: 
+Los genomas estarán depositados en el siguiente directorio ```/home/courses/studentXX/genomes/``. Crearemos un directorio dentro del directorio genomes/, quedando así  /home/courses/studentXX/genomes/QC_estudianteX/. Con esto, ya estamos listos para construir nuestros scripts y ejecutarlos
 
 ```
 mkdir ~/genomes/QC_estudianteX
 
 ```
 
+Para la elaboración de los scripts, se considera los siguientes comandos para FastQC y MultiQC
+Comando general de FastQC:
 ```
-#!/bin/bash
-#---------------Script SBATCH - NLHPC ----------------
-#SBATCH -J FastQC-tunombre
-#SBATCH -p slims
-#SBATCH --reservation=bioagosto
-#SBATCH -n 1
-#SBATCH -c 1
-#SBATCH --mem-per-cpu=2300
-#SBATCH --mail-user=email
-#SBATCH --mail-type=ALL
-#SBATCH -t 2:2:5
-#SBATCH -o FastQC_%j.out
-#SBATCH -e FastQC_%j.err
-
-GEN=/home/courses/studentXX/genomes
-QC=/home/courses/studentXX/QC
-
-source $HOME/miniconda3/bin/activate
-conda activate assembly
-
-fastqc -o $QC/ --noextract -t 1 -f fastq $GEN/*.gz
-
-
-```
-Verificaremos la ejecución en tiempo real de este proceso imprimiento el archivo FastQC_%j.out con el comando ```cat```
-
-```
-cat FastQC_%j.out
-
+fastqc –o ~/genomes/QC_estudianteX –t 1 –f fastq ~/genomes/m2267sub2_R2.fastq.gz
 ```
 
-Aquí observaremos un diálogo que indica que el proceso avanza en un 5, 10 y 15% progresivamente. Entre los comandos que nos permitirán hacer un seguimiento y comunicarnos con el backend tenemos los siguientes: 
-
-
-+ sinfo : Muestra el estado de las particiones.
-+ squeue - u : Muestra la cola de tareas.
-+ scancel : Mata un trabajo.
-+ sbatch : Corre un script en el backend.
-+ srun : Corre un script en el frontend.
-+ sacct -X : Muestra el estado de todas la tareas ejecutadas.
-+ scontrol -dd show job IDtrabajo: Detalla la información de un trabajo. 
-+ sstat : Dice la cantidad de recursos utilizados por un trabajo.
-
-Una vez terminado la verificación de la calidad de los genomas, se creará en nuesto directorio  ```/home/fleon/usuarios/tunombre/QC``` archivos html y otros archivos .zip. A continuación, realizaremos un resumen de estos análisis de calidad con el programa ``multiqc``, que también se encuentra instalado en el servidor. Dado que este programa es muy rápido y no ocupa muchos recursos, lo enviaremos a correr en el frontend del servidor de la siguiente forma:
-
+Comando general de MultiQC:
 ```
-source $HOME/miniconda3/bin/activate
-multiqc QC/
+multiqc .
+```
+NOTA: este último se debe ejecutar desde el directorio donde se encuentran los outputs del fastqc (~/genomes/QC_estudianteX).
+
+Tranferencia de los resultados a maquina local. Para realizar esto, se debe ejecutar el siguiente comando desde la terminal de la COMPUTADORA LOCAL. De esta forma, indicaremos que conecte con el cluster, y descargue todo el directorio *QC_estudianteX* en el WD.
+```
+rsync -azvrP -e ssh student88@leftraru.nlhpc.cl:/home/courses/student88/genomes/QC_estudianteX .
 ```
 
-Inmediatamente aparecerá un diálogo de la ejecución del programa ``multiqc``
 
-Al igual que ``fastqc``, se generará un archivo html que NO podremos visualizar en el servidor, de forma que debemos descargarlo a la máquina local a través del siguiente comando. Para ello nos ubicamos en el directorio de la maquina local Genobiostoic/Terminal/Practica2 y ejecutamos este comando:
-
-```
-rsync -azvrP -e  ssh fleon@leftraru.nlhpc.cl:/home/fleon/genomes/usuarios/tunombre/multiqc.html ./
-
-```
- Una vez descargado este archivo procederemos a abrirlo a través de su enlace a una pagina web. Aquí veremos un resumen de la calidad de los reads entregados por la empresa de secuenciación:
+Una vez descargado este archivo procederemos a abrirlo a través de su enlace a una pagina web. Aquí veremos un resumen de la calidad de los reads entregados por la empresa de secuenciación:
 
  + ¿Cuántos millones de reads tenemos entre los R1 y R2?
  + ¿Cuántas secuencias duplicadas tenemos?
@@ -87,21 +46,3 @@ rsync -azvrP -e  ssh fleon@leftraru.nlhpc.cl:/home/fleon/genomes/usuarios/tunomb
  + ¿Poseen restos de adaptadores?
  + ¿Qué significan los colores verdes, amarillos y rojos en cada análisis?
  + ¿Cuál es la profundidad de secuenciación potencial que obtuve?
-
-
-
-
-
-
-
->En ocasiones, deberíamos verificar la imágen de intregridad o fidelidad de tranferencia de un archivo a través del comando ```md5sum```, éste crea una imagen en caracteres alfa numéricos que debe coincidir con el archivo de origen, basta tipear:
-```
-md5sum archivo.txt
-```
->La imagen  tardará en imprimirse dependiendo del tamaño del archivo. Esta imagen se corroborará con la imagen original de donde originalmente se haya realizado la descarga. En este caso si los archivos son copia fiel y exacta recibiremos un mensaje como:
-```la imagen coincide```
- 
-
-
-
-
