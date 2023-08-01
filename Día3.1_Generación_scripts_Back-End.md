@@ -1,4 +1,4 @@
-# Uso de Servidores de alta Capacidad
+# Servidores de alta Capacidad
 
 
 El uso de servidores remotos es cada vez más común y posibilita la oportunidad de ocupar, eficientemente, múltiples procesadores de alto rendimiento. Cada servidor tiene su propio tipo de configuración, arquitectura, capacidades, particiones y pueden tener o no agendadores de tareas o "*Schedulers*". Les sugerimos que a la hora de ocupar un servidor de alta capacidad, aprendan sobre su estructuración y funcionamiento a través de las instrucciones de sus administradores.
@@ -31,7 +31,7 @@ Una vez conectado en el servidor, entraremos al *home* del usuario hospedero, qu
 ![Z.png](https://github.com/lafabi/Genobiostoic/blob/main/ejemplo_contenidodir.png)
 
 
-Si utilizamos el comando ```pwd```, veremos que estamos ubicados en la carpeta /home/studentXX. Dado que varios participantes están utilizando el mismo usuario, crearemos un directorio con el nombre de cada uno usando ```mkdir```. Verificamos que cada nombre del usuario escogido por participante se haya creado dentro de /home/studentXX a través del comando ```ls```
+Si utilizamos el comando ```pwd```, veremos que estamos ubicados en la carpeta /home/courses/studentXX. Dado que varios participantes están utilizando el mismo usuario, crearemos un directorio con el nombre de cada uno usando ```mkdir```. Verificamos que cada nombre del usuario escogido por participante se haya creado dentro de /home/courses/studentXX a través del comando ```ls```
 
 
 Al igual que nuestra máquina local, éstos servidores ofrecen la alternativa de correr scripts en el **frontend**, pero no es la mejor opción, dado que se ocupan los recursos informaticos de forma poco eficiente. En este caso, los servidores de alta capacidad tales como el NLHPC de la Universidad de Chile [https://www.nlhpc.cl/](https://www.nlhpc.cl/) o [Geryon https://www3.astro.puc.cl/geryon/](https://www3.astro.puc.cl/geryon) de la Universidad Católica funcionan con un sistema de planificador de tareas o *Schedulers*. Este sistema opera asignando filas y prioridades a las tareas según la capacidad de los recursos, administrando de mejor forma los recursos tales como memoria, núcleos, tiempo de ejecución de trabajos, etc. Estos scripts se corren en el **backend**, que es un espacio donde se llevan a cabo tareas en el sistema operativo oculto de fondo. En el próximo apartado hablaremos con más detalle de este sistema de administrador de trabajos. Por ahora veremos la arquitectura en la construcción de estos scripts: 
