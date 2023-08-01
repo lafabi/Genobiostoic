@@ -59,3 +59,9 @@ Ahora que está creado el ambiente, lo activamos,  y luego vemos qué configurac
 ```
 fastqc --help
 ```
+
+En caso de que uno quisiera instalar otro paquete dentro del ambiente activo, se debe ejecutar
+```
+conda install -c <canal> <paquete>
+```
+***Precaución*** con esto último, ya que debemos evitar instalar paquetes en el ambiente (base) de conda. Sin embargo, podemos ejecutarlo en nuetro nuevo ambiente creado (activandolo previamente) si desearamos instalar un nuevo programa en el.
