@@ -21,7 +21,7 @@ En esta etapa del taller comenzaremos a editar y generar varios archivos de impo
 
 
 GEN=/home/courses/studentXX/genomes
-TRIM=/home/courses/studentXX/genomes
+TRIM=/home/courses/studentXX/genomes/NOMBRE
 ADAPT=/home/courses/Adapt
 
 source $HOME/miniconda3/bin/activate
@@ -98,7 +98,7 @@ El script lo puede guardar con el nombre alusivo a la función de su contenido.
 #SBATCH -e BWA_%j.err
 
 REF=/home/courses/studentXX/Index
-OUT=/home/courses/studentXX/genomes
+OUT=/home/courses/studentXX/genomes/NOMBRE
 
 source $HOME/miniconda3/bin/activate
 source activate assembly   
