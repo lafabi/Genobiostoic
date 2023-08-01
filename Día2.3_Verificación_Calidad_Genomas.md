@@ -13,7 +13,12 @@ Al trabajar con datos genómicos, muchas veces grandes en peso y también numero
 
 Ya una vez transferidos los genomas de Zorros al servidor (esto ya lo hemos hecho para ahorar tiempo), pasaremos al primer "análsis", que es comprobar la calidad de los genomas. Para ello ocuparemos el programa ```FastQC```, que para efectos de este taller ya está instalado en el servidor a través del gestor de paquetes llamado ```conda```.
 
-Los genomas estarán depositados en el siguiente directorio ```/home/fleon/genomes/``. Crearemos un directorio dentro de nuestro usuario denominado QC/. Con esto, ya estamos listos para construir nuestro primer Script y enviarlo a través del *scheduler* SLURM al backend: 
+Los genomas estarán depositados en el siguiente directorio ```/home/courses/studentXX/genomes/``. Crearemos un directorio dentro del directorio genomes/, quedando así  /home/courses/studentXX/genomes/QC_estudianteX/. Con esto, ya estamos listos para construir nuestro primer Script y enviarlo a través del *scheduler* SLURM al backend: 
+
+```
+mkdir ~/genomes/QC_estudianteX
+
+```
 
 ```
 #!/bin/bash
@@ -81,6 +86,7 @@ rsync -azvrP -e  ssh fleon@leftraru.nlhpc.cl:/home/fleon/genomes/usuarios/tunomb
  + ¿Cuál es el tamaño promedio de los reads
  + ¿Poseen restos de adaptadores?
  + ¿Qué significan los colores verdes, amarillos y rojos en cada análisis?
+ + ¿Cuál es la profundidad de secuenciación potencial que obtuve?
 
 
 
