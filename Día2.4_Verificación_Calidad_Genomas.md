@@ -1,4 +1,4 @@
-![image](https://github.com/lafabi/Genobiostoic/assets/60276632/40d76290-f711-48df-ba71-7dceae833532)![image](https://github.com/lafabi/Genobiostoic/assets/60276632/71673b42-c0b2-4dfb-aead-96ad8654be52)# Verificación de calidad de reads en el servidor NLHPC
+# Verificación de calidad de reads en el servidor NLHPC
 
 Para verificar la calidad de los genomas, primero hay que recibirlos de la plataforma de secuenciación y luego subirlos a los servidores de alta capacidad. Existen varias formas de transferir los archivos al servidor, que se mencionarán a continuación. Supongamos que tenemos los siguientes genomas de zorros, m2267sub2_R1.fastq.gz, m2267sub2_R2.fastq.gz, m2293sub2_R1.fastq.gz y m2293sub2_R2.fastq.gz contenidos el directorio "genomes" de nuestra máquina local, y los queremos subir al servidor remoto del NLHPC con destino al directorio /home/courses/sutdentXX/genomes. Para realizar esta tarea, ocuparemos el comando ```rsync``` junto con otros operadores de la siguiente forma:
 
@@ -30,7 +30,7 @@ Comando general de MultiQC:
 ```
 multiqc .
 ```
-NOTA: este último se debe ejecutar desde el directorio donde se encuentran los outputs del fastqc (~/genomes/QC_estudianteX).
+>**Nota**: este último se debe ejecutar desde el directorio donde se encuentran los outputs del fastqc (~/genomes/QC_estudianteX).
 
 Tranferencia de los resultados a maquina local. Para realizar esto, se debe ejecutar el siguiente comando desde la terminal de la COMPUTADORA LOCAL. De esta forma, indicaremos que conecte con el cluster, y descargue todo el directorio *QC_estudianteX* en el WD.
 ```
