@@ -9,7 +9,7 @@ Los archivos SAM obtenidos en el paso previo, son archivos pesados, más aun cua
 #SBATCH -J Samtools-view
 #SBATCH -p slims
 #SBATCH --reservation=bioagosto
-#SBATCH -n 1
+#SBATCH -n 5
 #SBATCH -c 1
 #SBATCH --mem-per-cpu=2300
 #SBATCH --mail-user=email
@@ -36,7 +36,7 @@ En el siguiente paso usamos el programa *samtools* de nuevo, esta vez con la fun
 #SBATCH -J Samtools-sort
 #SBATCH -p slims
 #SBATCH --reservation=bioagosto
-#SBATCH -n 1
+#SBATCH -n 5
 #SBATCH -c 1
 #SBATCH --mem-per-cpu=2300
 #SBATCH --mail-user=email
@@ -51,7 +51,7 @@ BAM=/home/courses/studentXX/genomes
 source $HOME/miniconda3/bin/activate
 source activate assembly   
 
-samtools sort -o $SORTBAM/m2267.sorted.bam -@ 40 $BAM/m2267.bam
+samtools sort -o $SORTBAM/m2267.sorted.bam -@ 5 $BAM/m2267.bam
 
 ```
 
