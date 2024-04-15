@@ -1,4 +1,4 @@
-![imagen](https://github.com/lafabi/Genobiostoic/assets/72162695/5009d622-fa58-41b3-96a1-c53278bb7dae)# Familiarización con la terminal Bash: Día 1
+
 
 **¿Qué es la terminal Bash o Shell?**
 
