@@ -1,6 +1,5 @@
 # Uso de Servidores de alta Capacidad
 
-
 El uso de servidores remotos es cada vez más común y posibilita la oportunidad de ocupar, eficientemente, múltiples procesadores de alto rendimiento. Cada servidor tiene su propio tipo de configuración, arquitectura, capacidades, particiones y pueden tener o no agendadores de tareas o "*Schedulers*". Les sugerimos que a la hora de ocupar un servidor de alta capacidad, aprendan sobre su estructuración y funcionamiento a través de las instrucciones de sus administradores.
 Una de las primeras tareas que debemos aprender para trabajar con servidores remotos es cómo conectarnos; para ello usamos el comando ```ssh``` (security shell). Este comando nos permite hacer una conexión segura desde la máquina local a la remota. Una vez abierta la cuenta en el servidor remoto, el administrador del servidor nos otorgará un usuario y un password. En muchas ocasiones necesitaremos una dirección IP para poder establecer la conexión:
 
