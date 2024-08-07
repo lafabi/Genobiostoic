@@ -12,7 +12,6 @@ picard CreateSequenceDictionary -R $REF/GCA_010085355.fna --CREATE_MD5_FILE true
 ```
 gatk3 -nt 6 -T RealignerTargetCreator -R $REF/GCA_010078495.1_BGI_Enov.V1_genomic.fna -I $PATH/${sample}_sorted_dedup.bam -o $PATH/${sample}.realn.intervals -allowPotentiallyMisencodedQuals -S LENIENT
 ```
-
 ```
 gatk3 -T IndelRealigner -R $REF/index_Enovo_ref/GCA_010078495.fna -I $PATH/${sample}_sorted_dedup.bam -targetIntervals $PATH/${sample}.realn.intervals -o $PATH/${sample}.realign.bam -allowPotentiallyMisencodedQuals -S LENIENT --generate_md5 
 ```
