@@ -1,5 +1,5 @@
 
-**¿Desde Marcar los duplicados hasta los archivos realign. ?**
+**Desde Marcar los duplicados hasta los archivos realign**
 
 ```
 picard MarkDuplicates I=$PATH/${sample}*_sorted.bam O=$PATH/${sample}*_sorted_dedup.bam METRICS_FILE=$PATH/${sample}*_sorted_dedup.metrics.txt VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true CREATE_MD5_FILE=true TAGGING_POLICY=All ASSUME_SORT_ORDER=coordinate
